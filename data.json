@@ -79,7 +79,7 @@
       },
       {
         "title": "Zomato India Multi-City Restaurant Study",
-        "description": "a comprehensive exploratory data analysis of Zomato's India restaurant listings (top 100 cities, scraped October 2023). Using 44,891 raw observations, we clean and curate 36,633 high-confidence records, engineer behavioural features, profile national and city-level trends, conduct inferential statistics, and train baseline rating prediction models. The analysis highlights concentration of restaurants in Tier-2/3 markets, ",
+        "description": "a comprehensive exploratory data analysis of Zomato's India restaurant listings (top 100 cities, scraped October 2023). Using 44,891 raw observations, we clean and curate 36,633 high-confidence records, engineer behavioural features, profile national and city-level trends, conduct inferential statistics, and train baseline rating prediction models. The analysis highlights concentration of restaurants in Tier-2/3 markets, limited price elasticity of ratings, cuisine preferences across metros, and the relative importance of delivery time and menu diversity in explaining rating variance.",
         "image": "https://github.com/Svamsi2006/zomato_eda/blob/main/images/fig12.png",
         "imageAlt": "EDA",
         "liveDemo": "https://github.com/Svamsi2006/zomato_eda/tree/main",
@@ -91,7 +91,7 @@
           "Mathplot",
           "seaborn"
         ],
-        "id": 1765817803927
+        "id": 1765819771551
       }
     ],
     "aiBusiness": []
