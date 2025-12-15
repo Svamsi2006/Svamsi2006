@@ -1,0 +1,76 @@
+{
+  "certifications": [
+    {
+      "id": 1,
+      "title": "Oracle Cloud Infrastructure 2025 Certified Data Science Professional",
+      "issuer": "Oracle",
+      "date": "2025",
+      "icon": "fas fa-certificate",
+      "link": ""
+    }
+  ],
+  "projects": {
+    "dataScience": [
+      {
+        "id": 1,
+        "title": "Sales Dashboard",
+        "description": "Real-time dashboard connected to Google Sheets, allowing live data display and updates via an integrated chatbot. All automation and integration are managed by n8n for seamless collaboration.",
+        "image": "./images/sales_dashboard.png",
+        "imageAlt": "Sales Dashboard",
+        "fallbackImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        "liveDemo": "https://comic.lovable.app/",
+        "github": "https://comic.lovable.app/",
+        "technologies": ["Google sheets", "n8n", "Power BI", "Mathplot", "seaborn"]
+      },
+      {
+        "id": 2,
+        "title": "Data Visualization Dashboard",
+        "description": "Interactive dashboard for analyzing large datasets with real-time data processing and beautiful visualizations EDA on Indian Census.",
+        "image": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        "imageAlt": "Data Visualization Dashboard",
+        "liveDemo": "https://github.com/Svamsi2006/India-Census-EDA-Project",
+        "github": "https://github.com/Svamsi2006/India-Census-EDA-Project",
+        "technologies": ["Python", "pandas", "numpy", "Mathplot", "seaborn"]
+      },
+      {
+        "id": 3,
+        "title": "Predictive Analytics Model",
+        "description": "Successfully built a machine learning model for loan prediction.",
+        "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        "imageAlt": "Predictive Analytics Model",
+        "liveDemo": "https://github.com/Svamsi2006/Ciperschool-project/blob/main/loan_prediction_simple.ipynb",
+        "github": "https://github.com/Svamsi2006/Ciperschool-project/blob/main/loan_prediction_simple.ipynb",
+        "technologies": ["Python", "Scikit-learn", "Pandas", "TensorFlow", "Data Preprocessing", "Feature Engineering", "Model Development"]
+      },
+      {
+        "id": 4,
+        "title": "Data Visualisation using web interface",
+        "description": "A powerful and intuitive web-based dashboard builder that allows users to create stunning, fully functional data visualizations by simply uploading a .json file.",
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        "imageAlt": "Data Visualization Web Interface",
+        "liveDemo": "https://svamsi2006.github.io/data-visualization-dashboardd/#",
+        "github": "https://github.com/Svamsi2006/data-visualization-dashboardd?tab=readme-ov-file",
+        "technologies": ["HTML", "JSON", "css", "Java Script"]
+      }
+    ],
+    "aiBusiness": []
+  },
+  "skills": {
+    "languages": ["Python", "JavaScript", "SQL", "HTML/CSS"],
+    "dataAnalysis": ["Power BI", "Tableau", "Excel", "Pandas", "NumPy"],
+    "machineLearning": ["TensorFlow", "Scikit-learn", "PyTorch"],
+    "webDevelopment": ["React", "Node.js", "Express"],
+    "databases": ["MySQL", "PostgreSQL", "MongoDB"],
+    "tools": ["Git", "Docker", "VS Code", "Jupyter"]
+  },
+  "education": [
+    {
+      "id": 1,
+      "degree": "B.Tech in Computer Science Engineering",
+      "institution": "",
+      "focus": "Data Science and AI Web Development",
+      "status": "In Progress",
+      "icon": "fas fa-graduation-cap"
+    }
+  ]
+}

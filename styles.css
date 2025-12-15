@@ -628,10 +628,16 @@
 
 /* Enhanced About Section Cards */
 .intro-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
     margin-top: 2rem;
+}
+
+.intro-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
 }
 
 .intro-card {
@@ -1219,6 +1225,10 @@
     
     /* About Section Mobile */
     .intro-section {
+        gap: 1rem;
+    }
+    
+    .intro-row {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
@@ -1948,7 +1958,7 @@ body::before {
 }
 
 .section-cta {
-    margin-top: 3rem;
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
 }
@@ -2133,10 +2143,8 @@ section {
 }
 
 .about-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+    display: block;
+    width: 100%;
 }
 
 .about-text p {
@@ -3336,6 +3344,16 @@ section {
 
 .footer-links a:hover {
     color: var(--primary-blue);
+}
+
+/* Admin Trigger Styles */
+#adminTrigger {
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+#adminTrigger:hover {
+    opacity: 0.3 !important;
+    color: #0bd9f4 !important;
 }
 
 /* Back to Top Button */

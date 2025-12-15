@@ -276,24 +276,28 @@
                 <div class="about-text" data-aos="fade-right" data-aos-delay="200">
                     <!-- Enhanced animated introduction -->
                     <div class="intro-section">
-                        <div class="intro-card card-1" data-aos="fade-up" data-aos-delay="300">
-                            <h3><i class="fas fa-user-graduate"></i> Who I Am</h3>
-                            <p>I'm <span class="highlight-text">Vamsi Siva Ganesh Seelam</span>, a passionate Data Analyst, Business Analyst, and AI Web Developer with a strong foundation in computer science.</p>
+                        <div class="intro-row">
+                            <div class="intro-card card-1" data-aos="fade-up" data-aos-delay="300">
+                                <h3><i class="fas fa-user-graduate"></i> Who I Am</h3>
+                                <p>I'm <span class="highlight-text">Vamsi Siva Ganesh Seelam</span>, a passionate Data Analyst, Business Analyst, and AI Web Developer with a strong foundation in computer science.</p>
+                            </div>
+                            
+                            <div class="intro-card card-3" data-aos="fade-up" data-aos-delay="500">
+                                <h3><i class="fas fa-rocket"></i> My Expertise</h3>
+                                <p>I excel in <span class="highlight-text">transforming raw data into actionable business insights</span> using advanced analytics tools like Power BI, Tableau, and Excel, while also developing robust web solutions.</p>
+                            </div>
                         </div>
                         
-                        <div class="intro-card card-2" data-aos="fade-up" data-aos-delay="500">
-                            <h3><i class="fas fa-graduation-cap"></i> My Journey</h3>
-                            <p>Currently pursuing my <span class="highlight-text">B.Tech in Computer Science Engineering</span> with a focus on Data Science and AI Web Development, specializing in modern technologies and real-world applications.</p>
-                        </div>
-                        
-                        <div class="intro-card card-3" data-aos="fade-up" data-aos-delay="700">
-                            <h3><i class="fas fa-rocket"></i> My Expertise</h3>
-                            <p>I excel in <span class="highlight-text">transforming raw data into actionable business insights</span> using advanced analytics tools like Power BI, Tableau, and Excel, while also developing robust web solutions.</p>
-                        </div>
-                        
-                        <div class="intro-card card-4" data-aos="fade-up" data-aos-delay="900">
-                            <h3><i class="fas fa-target"></i> My Mission</h3>
-                            <p>My goal is to <span class="highlight-text">leverage technology and analytics</span> to build data-driven applications that address real-world business challenges and drive strategic decision-making.</p>
+                        <div class="intro-row">
+                            <div class="intro-card card-2" data-aos="fade-up" data-aos-delay="700">
+                                <h3><i class="fas fa-graduation-cap"></i> My Journey</h3>
+                                <p>Currently pursuing my <span class="highlight-text">B.Tech in Computer Science Engineering</span> with a focus on Data Science and AI Web Development, specializing in modern technologies and real-world applications.</p>
+                            </div>
+                            
+                            <div class="intro-card card-4" data-aos="fade-up" data-aos-delay="900">
+                                <h3><i class="fas fa-target"></i> My Mission</h3>
+                                <p>My goal is to <span class="highlight-text">leverage technology and analytics</span> to build data-driven applications that address real-world business challenges and drive strategic decision-making.</p>
+                            </div>
                         </div>
                     </div>
                     
@@ -324,88 +328,12 @@
                         <i class="fas fa-download"></i>
                         📄 Download Resume
                     </a> -->
-                    <a href="https://drive.google.com/uc?export=download&id=1Icj34OaJzDSCDVCSYL6zIYq6ozkB-v2j" target="_blank" class="btn btn-primary download-btn">
+                    <a href="https://drive.google.com/uc?export=download&id=1L2a3wzo3wuEfzwxINRJm35SPQgS8cFel" target="_blank" class="btn btn-primary download-btn">
                         <i class="fas fa-download"></i>
                         📄 Download Resume
                     </a>
-                </div>
-                <div class="about-animation" data-aos="fade-left" data-aos-delay="400">
-                    <!-- Data Science Animation Container -->
-                    <div class="data-science-demo">
-                        <canvas id="backgroundCanvas" class="bg-canvas"></canvas>
-                        
-                        <div class="demo-header">
-                            <h3 class="animated-title">Data Science Process</h3>
-                            <p class="demo-description">Watch raw data transform into insights</p>
-                        </div>
-                        
-                        <!-- Data Bowl -->
-                        <div class="data-bowl">
-                            <div class="bowl-container">
-                                <div class="bowl"></div>
-                                <div class="data-particles" id="dataParticles"></div>
-                            </div>
-                        </div>
-                        
-                        <!-- Control Buttons -->
-                        <!-- <div class="control-panel">
-                            <button class="control-btn start-btn" id="startBtn">
-                                <i class="fas fa-play"></i>
-                                Start Cleaning
-                            </button>
-                            <button class="control-btn reset-btn" id="resetBtn">
-                                <i class="fas fa-undo"></i>
-                                Reset
-                            </button>
-                            <button class="control-btn auto-btn" id="autoBtn">
-                                <i class="fas fa-sync"></i>
-                                Auto Mode
-                            </button>
-                        </div> -->
-                        
-                        <!-- Clean Data Table -->
-                        <div class="clean-data-container">
-                            <h4>Clean Data Output</h4>
-                            <div class="table-wrapper">
-                                <table class="data-table" id="dataTable">
-                                    <thead>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Name</th>
-                                            <th>Age</th>
-                                            <th>Score</th>
-                                            <th>Status</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="tableBody">
-                                        <!-- Data will be populated here -->
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        
-                        <!-- Process Steps -->
-                        <div class="process-steps">
-                            <div class="step">
-                                <span class="step-number">1</span>
-                                <span class="step-text">Raw Data Collection</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-number">2</span>
-                                <span class="step-text">Data Processing</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-number">3</span>
-                                <span class="step-text">Clean Output</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="section-cta" data-aos="fade-up" data-aos-delay="200">
-                    <a href="https://wa.me/919346147336" target="_blank" class="animated-cta" aria-label="Chat with Vamsi on WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                        Start a WhatsApp Conversation
-                    </a>
+                    
+                    
                 </div>
             </div>
         </div>
@@ -827,10 +755,10 @@
                 </div>
             </div>
             <div class="section-cta" data-aos="fade-up" data-aos-delay="200">
-                <a href="https://balaveerulu.vercel.app/" target="_blank" class="animated-cta" aria-label="Visit Balaveerulu portfolio">
-                    <i class="fas fa-rocket"></i>
-                    Discover My Startup Portfolio
-                </a>
+                        <a href="https://wa.me/919346147336" target="_blank" class="animated-cta" aria-label="Chat with Vamsi on WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                            Start a WhatsApp Conversation
+                        </a>
             </div>
         </div>
     </section>
@@ -1145,7 +1073,7 @@
                 </div>
             </div>
             <div class="section-cta" data-aos="fade-up" data-aos-delay="200">
-                <a href="https://drive.google.com/uc?export=download&id=1Icj34OaJzDSCDVCSYL6zIYq6ozkB-v2j" target="_blank" class="animated-cta" aria-label="Download resume for detailed skills">
+                <a href="https://drive.google.com/uc?export=download&id=1L2a3wzo3wuEfzwxINRJm35SPQgS8cFel" target="_blank" class="animated-cta" aria-label="Download resume for detailed skills">
                     <i class="fas fa-file-download"></i>
                     Download Full Skill Resume
                 </a>
@@ -1579,6 +1507,8 @@
                 <div class="footer-links">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
+                    <!-- Hidden Admin Button (almost invisible) -->
+                    <span id="adminTrigger" style="opacity: 0.05; cursor: pointer; font-size: 8px; color: #333; user-select: none;" title="Admin">katapa</span>
                 </div>
             </div>
         </div>
@@ -1670,6 +1600,9 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="config.js"></script>
     <script src="script.js"></script>
+    <!-- Private CMS Config (optional, gitignored) -->
+    <script src="cms-config.private.js" onerror="console.log('No private CMS config found (this is normal)')"></script>
+    <script src="cms.js"></script>
 </body>
 </html>
 
