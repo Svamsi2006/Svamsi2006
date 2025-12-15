@@ -20,7 +20,13 @@
         "fallbackImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
         "liveDemo": "https://comic.lovable.app/",
         "github": "https://comic.lovable.app/",
-        "technologies": ["Google sheets", "n8n", "Power BI", "Mathplot", "seaborn"]
+        "technologies": [
+          "Google sheets",
+          "n8n",
+          "Power BI",
+          "Mathplot",
+          "seaborn"
+        ]
       },
       {
         "id": 2,
@@ -30,7 +36,13 @@
         "imageAlt": "Data Visualization Dashboard",
         "liveDemo": "https://github.com/Svamsi2006/India-Census-EDA-Project",
         "github": "https://github.com/Svamsi2006/India-Census-EDA-Project",
-        "technologies": ["Python", "pandas", "numpy", "Mathplot", "seaborn"]
+        "technologies": [
+          "Python",
+          "pandas",
+          "numpy",
+          "Mathplot",
+          "seaborn"
+        ]
       },
       {
         "id": 3,
@@ -40,7 +52,15 @@
         "imageAlt": "Predictive Analytics Model",
         "liveDemo": "https://github.com/Svamsi2006/Ciperschool-project/blob/main/loan_prediction_simple.ipynb",
         "github": "https://github.com/Svamsi2006/Ciperschool-project/blob/main/loan_prediction_simple.ipynb",
-        "technologies": ["Python", "Scikit-learn", "Pandas", "TensorFlow", "Data Preprocessing", "Feature Engineering", "Model Development"]
+        "technologies": [
+          "Python",
+          "Scikit-learn",
+          "Pandas",
+          "TensorFlow",
+          "Data Preprocessing",
+          "Feature Engineering",
+          "Model Development"
+        ]
       },
       {
         "id": 4,
@@ -50,18 +70,67 @@
         "imageAlt": "Data Visualization Web Interface",
         "liveDemo": "https://svamsi2006.github.io/data-visualization-dashboardd/#",
         "github": "https://github.com/Svamsi2006/data-visualization-dashboardd?tab=readme-ov-file",
-        "technologies": ["HTML", "JSON", "css", "Java Script"]
+        "technologies": [
+          "HTML",
+          "JSON",
+          "css",
+          "Java Script"
+        ]
+      },
+      {
+        "title": "Zomato India Multi-City Restaurant Study",
+        "description": "a comprehensive exploratory data analysis of Zomato's India restaurant listings (top 100 cities, scraped October 2023). Using 44,891 raw observations, we clean and curate 36,633 high-confidence records, engineer behavioural features, profile national and city-level trends, conduct inferential statistics, and train baseline rating prediction models. The analysis highlights concentration of restaurants in Tier-2/3 markets, ",
+        "image": "https://github.com/Svamsi2006/zomato_eda/blob/main/images/fig12.png",
+        "imageAlt": "EDA",
+        "liveDemo": "https://github.com/Svamsi2006/zomato_eda/tree/main",
+        "github": "https://github.com/Svamsi2006/zomato_eda/tree/main",
+        "technologies": [
+          "Python",
+          "pandas",
+          "numpy",
+          "Mathplot",
+          "seaborn"
+        ],
+        "id": 1765817803927
       }
     ],
     "aiBusiness": []
   },
   "skills": {
-    "languages": ["Python", "JavaScript", "SQL", "HTML/CSS"],
-    "dataAnalysis": ["Power BI", "Tableau", "Excel", "Pandas", "NumPy"],
-    "machineLearning": ["TensorFlow", "Scikit-learn", "PyTorch"],
-    "webDevelopment": ["React", "Node.js", "Express"],
-    "databases": ["MySQL", "PostgreSQL", "MongoDB"],
-    "tools": ["Git", "Docker", "VS Code", "Jupyter"]
+    "languages": [
+      "Python",
+      "JavaScript",
+      "SQL",
+      "HTML/CSS"
+    ],
+    "dataAnalysis": [
+      "Power BI",
+      "Tableau",
+      "Excel",
+      "Pandas",
+      "NumPy"
+    ],
+    "machineLearning": [
+      "TensorFlow",
+      "Scikit-learn",
+      "PyTorch"
+    ],
+    "webDevelopment": [
+      "React",
+      "Node.js",
+      "Express"
+    ],
+    "databases": [
+      "MySQL",
+      "PostgreSQL",
+      "MongoDB"
+    ],
+    "tools": [
+      "Git",
+      "Docker",
+      "VS Code",
+      "Jupyter"
+    ]
   },
   "education": [
     {
