@@ -41,19 +41,23 @@
 
   <br><br>
 
-  <h3>📊 Coding Velocity</h3>
+
+<h3>📊 Coding Velocity</h3>
   
   <div align="center">
     <a href="https://github.com/Svamsi2006">
-      <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Svamsi2006&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=1a1b27" />
+      <img src="https://github-readme-stats.vercel.app/api?username=Svamsi2006&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="160em" />
     </a>
     <a href="https://github.com/Svamsi2006">
-      <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Svamsi2006&layout=compact&theme=tokyonight&hide_border=true&bg_color=1a1b27" />
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Svamsi2006&layout=compact&theme=tokyonight&hide_border=true" height="160em" />
     </a>
   </div>
   
   <br>
   
+  <div align="center">
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=Svamsi2006&theme=tokyonight&hide_border=true" alt="Streak Stats" />
+  </div>  
   <div align="center">
     <img src="https://github-readme-streak-stats.herokuapp.com/?user=Svamsi2006&theme=tokyonight&hide_border=true&bg_color=1a1b27" alt="Streak Stats" />
   </div>
@@ -117,3 +121,4 @@
   </p>
 
 </div>
+
