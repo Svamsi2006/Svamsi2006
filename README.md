@@ -104,12 +104,7 @@
   
   <br>
   
-  <p align="center">
-    <img src="https://visitcount.itsvg.in/api?id=Svamsi2006&icon=5&color=6" alt="Profile Views" />
-  </p>
-  <p align="center">
-  <img src="https://profile-counter.glitch.me/Svamsi2006/count.svg" alt="Profile Views" />
-</p>
+  
 <p align="center">
   <img src="https://profile-counter.deno.dev/Svamsi2006/count.svg" alt="Visitor's Count" />
 </p>
@@ -122,5 +117,6 @@
   <img src="https://komarev.com/ghpvc/?username=Svamsi2006&label=Profile%20views&color=0e75b6&style=flat" alt="Profile Views" />
 </p>
 </div>
+
 
 
