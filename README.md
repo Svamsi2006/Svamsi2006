@@ -40,19 +40,21 @@
   <br><br>
   
   <h3>📊 Coding Velocity</h3>
-  
-  <p align="center">
-    <img src="https://github-readme-stats.vercel.app/api?username=Svamsi2006&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&hide_rank=true" alt="GitHub Stats" />
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Svamsi2006&layout=compact&theme=tokyonight&hide_border=true&hide=html,css" alt="Top Languages" />
-  </p>
-  
-  <p align="center">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=Svamsi2006&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
-  </p>
-  
-  <p align="center">
-    <img src="https://github-readme-activity-graph.vercel.app/graph?username=Svamsi2006&theme=tokyo-night&hide_border=true&area=true" alt="Activity Graph" />
-  </p>
+
+<p align="center">
+  <img src="https://github-readme-stats-fast.vercel.app/api?username=Svamsi2006&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&hide_rank=true" alt="GitHub Stats" />
+  <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=Svamsi2006&layout=compact&theme=tokyonight&hide_border=true&hide=html,css" alt="Top Languages" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Svamsi2006&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Svamsi2006&theme=tokyo-night&hide_border=true&area=true" alt="Activity Graph" />
+</p>
+
+<br>
   
   <br>
   
@@ -106,3 +108,4 @@
     <img src="https://visitcount.itsvg.in/api?id=Svamsi2006&icon=5&color=6" alt="Profile Views" />
   </p>
 </div>
+
