@@ -1,18 +1,4 @@
-<div align="center">
-
-<span style="display:inline-block;animation:fly 3s linear infinite;">🐦</span>
-<span style="display:inline-block;animation:fly 3s linear infinite 0.5s;">🐦</span>
-<span style="display:inline-block;animation:fly 3s linear infinite 1s;">🐦</span>
-
-<style>
-@keyframes fly {
-  0% { transform: translateX(-50px); }
-  100% { transform: translateX(400px); }
-}
-</style>
-
-**Flying birds!** ✨
-</div>
+![Flying birds](https://github.com/username/repo/raw/main/birds.gif)
 
 
 <div align="center">
@@ -134,6 +120,7 @@
   <img src="https://komarev.com/ghpvc/?username=Svamsi2006&label=Profile%20views&color=0e75b6&style=flat" alt="Profile Views" />
 </p>
 </div>
+
 
 
 
