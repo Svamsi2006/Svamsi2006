@@ -1,5 +1,6 @@
+https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHM5azB2d21xZGg3OHd0NTdtZnkxNTZ5Njc3NWdmMmw1aXZhamc1NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/b1h80kgemNIPiQHeQO/giphy.gif
 
-
+![giphy](https://github.com/user-attachments/assets/2b5b04d5-6249-4bd6-8f8d-a8470fb6791f)
 
 <div align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=32&pause=1000&color=7AA2F7&center=true&vCenter=true&width=600&lines=Hi%2C+I'm+Vamsi+Siva+Ganesh;Data+%26+Business+Analyst;Building+AI-Powered+Web+Apps;Transforming+Data+Into+Decisions" alt="Typing SVG" />
@@ -120,6 +121,7 @@
   <img src="https://komarev.com/ghpvc/?username=Svamsi2006&label=Profile%20views&color=0e75b6&style=flat" alt="Profile Views" />
 </p>
 </div>
+
 
 
 
