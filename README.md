@@ -56,7 +56,9 @@
 
 <br>
 <small><small>
-  ![giphy](https://github.com/user-attachments/assets/2b5b04d5-6249-4bd6-8f8d-a8470fb6791f)
+  ![giphy](https://github.com/user-attachments/assets/eacf3d05-8224-4962-a21f-ee757d66059c)
+  ![giphy](https://github.com/user-attachments/assets/74129713-c1a1-4847-8f09-8aa4bc5fc317)
+
 </small></small>
   <br>
   
@@ -119,6 +121,7 @@
   <img src="https://komarev.com/ghpvc/?username=Svamsi2006&label=Profile%20views&color=0e75b6&style=flat" alt="Profile Views" />
 </p>
 </div>
+
 
 
 
