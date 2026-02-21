@@ -1,5 +1,19 @@
-<span style="animation: wave 2s infinite;">🐦✈️🐦</span>
-<style>@keyframes wave{0%,100%{transform:rotate(0deg);}25%{transform:rotate(-10deg);}75%{transform:rotate(10deg);}}</style>
+<div align="center">
+
+<span style="display:inline-block;animation:fly 3s linear infinite;">🐦</span>
+<span style="display:inline-block;animation:fly 3s linear infinite 0.5s;">🐦</span>
+<span style="display:inline-block;animation:fly 3s linear infinite 1s;">🐦</span>
+
+<style>
+@keyframes fly {
+  0% { transform: translateX(-50px); }
+  100% { transform: translateX(400px); }
+}
+</style>
+
+**Flying birds!** ✨
+</div>
+
 
 <div align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=32&pause=1000&color=7AA2F7&center=true&vCenter=true&width=600&lines=Hi%2C+I'm+Vamsi+Siva+Ganesh;Data+%26+Business+Analyst;Building+AI-Powered+Web+Apps;Transforming+Data+Into+Decisions" alt="Typing SVG" />
