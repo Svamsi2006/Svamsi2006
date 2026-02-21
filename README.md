@@ -57,7 +57,9 @@
 <br>
 <small><small>
   ![giphy](https://github.com/user-attachments/assets/eacf3d05-8224-4962-a21f-ee757d66059c)
-  ![giphy](https://github.com/user-attachments/assets/74129713-c1a1-4847-8f09-8aa4bc5fc317)
+  ![giphy](https://github.com/user-attachments/assets/b60875f8-b34f-4ee5-9a37-30a30124be06)
+![giphy](https://github.com/user-attachments/assets/03b5b28e-44c7-496e-a255-2dcfa313144a)
+
 
 </small></small>
   <br>
@@ -121,6 +123,7 @@
   <img src="https://komarev.com/ghpvc/?username=Svamsi2006&label=Profile%20views&color=0e75b6&style=flat" alt="Profile Views" />
 </p>
 </div>
+
 
 
 
