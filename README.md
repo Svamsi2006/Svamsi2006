@@ -58,8 +58,12 @@
 <small><small>
 <p align="center">
   <img src="https://github.com/user-attachments/assets/eacf3d05-8224-4962-a21f-ee757d66059c" alt="Preview 1" width="250" />
+  Think
   <img src="https://github.com/user-attachments/assets/b60875f8-b34f-4ee5-9a37-30a30124be06" alt="Preview 2" width="250" />
-  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdW0wcXF1M2xkZ2Jjczl5NnViaTR5c2doYmlpODdoenlxZDhrc3huaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/78XCFBGOlS6keY1Bil/giphy.gif" alt="Preview 3" width="250" />
+  Confuse
+  <img src="https://github.com/user-attachments/assets/790c9c4d-d6cd-473a-85e7-4e6b61117566" alt="Preview 3" width="250" />
+  Built
+
 </p>
 
 
@@ -125,6 +129,7 @@
   <img src="https://komarev.com/ghpvc/?username=Svamsi2006&label=Profile%20views&color=0e75b6&style=flat" alt="Profile Views" />
 </p>
 </div>
+
 
 
 
