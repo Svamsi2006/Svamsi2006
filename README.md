@@ -55,7 +55,31 @@
 </p>
 
 <br>
+  <div align="center">
+<svg width="300" height="100" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Animated flying bird -->
+  <g transform="translate(50,40)">
+    <path d="M0 0 Q5 -3 10 0 T20 0" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 280,0; 0,0" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="d" values="M0 0 Q5 -3 10 0 T20 0; M0 0 Q3 -1 6 0 T12 0; M0 0 Q5 -3 10 0 T20 0" dur="1s" repeatCount="indefinite"/>
+    </path>
+    <!-- Wing flap -->
+    <path d="M5 -2 L8 -8 L12 -2" fill="#333">
+      <animateTransform attributeName="transform" type="rotate" values="0 8 -2; 20 8 -2; -10 8 -2; 0 8 -2" dur="0.8s" repeatCount="indefinite"/>
+    </path>
+  </g>
   
+  <!-- Smaller bird -->
+  <g transform="translate(200,60)">
+    <path d="M0 0 Q3 -2 6 0 T12 0" fill="none" stroke="#666" stroke-width="1.5">
+      <animateTransform attributeName="transform" type="translate" values="0,0; -150,0; 0,0" dur="12s" repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>
+</div>
+
+**Flying birds animation ✨** - No JS, pure SVG/CSS, works everywhere!
+
   <br>
   
   <h3>🚀 High-Impact Projects</h3>
@@ -117,6 +141,7 @@
   <img src="https://komarev.com/ghpvc/?username=Svamsi2006&label=Profile%20views&color=0e75b6&style=flat" alt="Profile Views" />
 </p>
 </div>
+
 
 
 
