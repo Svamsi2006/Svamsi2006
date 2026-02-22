@@ -60,9 +60,9 @@
   <img src="https://github.com/user-attachments/assets/eacf3d05-8224-4962-a21f-ee757d66059c" alt="Preview 1" width="250" />
   
   <img src="https://github.com/user-attachments/assets/b60875f8-b34f-4ee5-9a37-30a30124be06" alt="Preview 2" width="250" />
-  Confuse
+  
   <img src="https://github.com/user-attachments/assets/790c9c4d-d6cd-473a-85e7-4e6b61117566" alt="Preview 3" width="250" />
-  Think                                            Confuse                                               Built
+ <h1> Think                                            Confuse                                               Built</h1>
 
 </p>
 
@@ -129,6 +129,7 @@
   <img src="https://komarev.com/ghpvc/?username=Svamsi2006&label=Profile%20views&color=0e75b6&style=flat" alt="Profile Views" />
 </p>
 </div>
+
 
 
 
