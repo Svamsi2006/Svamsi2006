@@ -2935,6 +2935,75 @@ section {
     box-shadow: 0 20px 40px rgba(41, 121, 255, 0.2);
 }
 
+.featured-project-card {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(280px, 420px) 1fr;
+}
+
+.featured-project-image {
+    height: 100%;
+    min-height: 320px;
+}
+
+.featured-project-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.project-highlight-tag {
+    display: inline-flex;
+    align-self: flex-start;
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(11, 217, 244, 0.14);
+    border: 1px solid rgba(11, 217, 244, 0.3);
+    color: var(--primary-blue);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.featured-points {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.project-action-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.project-action-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    min-height: 64px;
+    padding: 1rem 1.25rem;
+    border-radius: var(--border-radius-sm);
+    text-decoration: none;
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: transform var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.project-action-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(11, 217, 244, 0.45);
+    background: rgba(11, 217, 244, 0.1);
+}
+
+.project-action-card i {
+    color: var(--primary-blue);
+}
+
 .project-image {
     height: 200px;
     background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
@@ -3027,9 +3096,76 @@ section {
     font-weight: 600;
 }
 
+.hackathons-section {
+    background: var(--bg-secondary);
+}
+
+.hackathon-animation-bg {
+    opacity: 0.45;
+}
+
+.section-intro {
+    max-width: 760px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.hackathon-grid {
+    align-items: stretch;
+}
+
+.hackathon-card .project-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 /* Certificates Section */
 .certificates {
     background: var(--bg-secondary);
+}
+
+/* Certificate Year Filter */
+.cert-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.7rem;
+    margin: 0 auto 2.5rem;
+    max-width: 600px;
+}
+
+.cert-filter-btn {
+    padding: 0.5rem 1.4rem;
+    border-radius: 999px;
+    border: 1.5px solid var(--glass-border);
+    background: var(--glass-bg);
+    color: var(--text-secondary);
+    font-family: var(--font-family);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    backdrop-filter: blur(8px);
+}
+
+.cert-filter-btn:hover {
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+    background: rgba(11, 217, 244, 0.1);
+}
+
+.cert-filter-btn.active {
+    background: var(--gradient);
+    border-color: transparent;
+    color: #fff;
+    box-shadow: 0 4px 18px rgba(11, 217, 244, 0.3);
+}
+
+.certificate-card.cert-hidden {
+    display: none;
 }
 
 .certificates-carousel {
@@ -4055,6 +4191,14 @@ section {
     }
     
     .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-project-card {
+        grid-template-columns: 1fr;
+    }
+
+    .project-action-grid {
         grid-template-columns: 1fr;
     }
     

@@ -1906,7 +1906,32 @@ class DataScienceDemo {
 }
 
 // Initialize Chat Widget when DOM is ready
+// ==================== CERTIFICATE YEAR FILTER ====================
+function initCertFilter() {
+    const btns = document.querySelectorAll('.cert-filter-btn');
+    const carousel = document.getElementById('certificatesCarousel');
+    if (!btns.length || !carousel) return;
+
+    btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            btns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const filter = btn.dataset.filter;
+            carousel.querySelectorAll('.certificate-card').forEach(card => {
+                const yearEl = card.querySelector('.year');
+                if (!yearEl) return;
+                if (filter === 'all' || yearEl.textContent.trim() === filter) {
+                    card.classList.remove('cert-hidden');
+                } else {
+                    card.classList.add('cert-hidden');
+                }
+            });
+        });
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    initCertFilter();
     console.log('🚀 DOM loaded, initializing components...');
     
     // Initialize chat widget after a delay to ensure all other scripts are loaded
