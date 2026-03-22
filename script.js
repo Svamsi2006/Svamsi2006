@@ -396,11 +396,6 @@ function isMobileDevice() {
 // Mobile-specific adjustments
 function initMobileOptimizations() {
     if (isMobileDevice()) {
-        // Hide chatbot on mobile
-        const chatWidget = document.querySelector('.chat-widget');
-        if (chatWidget) {
-            chatWidget.style.display = 'none';
-        }
 
         // Reduce animation intensity on mobile
         const techParticles = document.querySelectorAll('.tech-particle');
@@ -1073,10 +1068,13 @@ function downloadResume() {
 }
 
 // Add click event to resume button
-document.querySelector('.download-btn').addEventListener('click', (e) => {
-    e.preventDefault();
-    downloadResume();
-});
+const downloadBtn = document.querySelector('.download-btn');
+if (downloadBtn) {
+    downloadBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        downloadResume();
+    });
+}
 
 // Lazy Loading for Images
 function lazyLoadImages() {
@@ -1254,7 +1252,7 @@ class ChatWidget {
     constructor() {
         // Use configuration from config.js or environment
         this.apiKey = this.getApiKey();
-        this.apiUrl = CONFIG?.GEMINI_API?.URL || 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent';
+        this.apiUrl = (typeof CONFIG !== 'undefined' && CONFIG && CONFIG.GEMINI_API && CONFIG.GEMINI_API.URL) ? CONFIG.GEMINI_API.URL : 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent';
         this.isOpen = false;
         this.isTyping = false;
         
@@ -1922,8 +1920,10 @@ function initCertFilter() {
                 if (!yearEl) return;
                 if (filter === 'all' || yearEl.textContent.trim() === filter) {
                     card.classList.remove('cert-hidden');
+                    card.style.display = '';
                 } else {
                     card.classList.add('cert-hidden');
+                    card.style.display = 'none';
                 }
             });
         });

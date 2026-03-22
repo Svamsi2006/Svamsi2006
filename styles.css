@@ -3165,7 +3165,7 @@ section {
 }
 
 .certificate-card.cert-hidden {
-    display: none;
+    display: none !important;
 }
 
 .certificates-carousel {
