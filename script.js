@@ -1256,10 +1256,12 @@ class ChatWidget {
             : '/api/chat';
         this.isOpen = false;
         this.isTyping = false;
+        this.apiAvailable = false;
         
         this.initializeElements();
         this.setupEventListeners();
         this.setupPortfolioContext();
+        this.checkChatService();
         
         // Show initial notification
         setTimeout(() => {
@@ -1277,6 +1279,7 @@ class ChatWidget {
         this.chatTyping = document.getElementById('chatTyping');
         this.chatNotification = document.getElementById('chatNotification');
         this.suggestionBtns = document.querySelectorAll('.suggestion-btn');
+        this.chatStatusText = document.querySelector('.chat-status span');
         
         // Debug: Check if all elements are found
         const elements = {
@@ -1288,6 +1291,7 @@ class ChatWidget {
             chatSend: this.chatSend,
             chatTyping: this.chatTyping,
             chatNotification: this.chatNotification,
+            chatStatusText: this.chatStatusText,
             suggestionBtns: this.suggestionBtns.length
         };
         
@@ -1349,6 +1353,32 @@ class ChatWidget {
         });
         
         console.log('✅ Chat event listeners setup complete');
+    }
+
+    async checkChatService() {
+        if (!this.chatStatusText) return;
+
+        // Opening index.html directly from file system cannot reach serverless routes.
+        if (window.location.protocol === 'file:') {
+            this.chatStatusText.textContent = 'Needs server';
+            this.chatStatusText.title = 'Run with Vercel dev or deploy to Vercel to use /api/chat';
+            return;
+        }
+
+        try {
+            const response = await fetch(this.apiEndpoint, { method: 'GET' });
+            if (response.ok) {
+                this.apiAvailable = true;
+                this.chatStatusText.textContent = 'Online now';
+                return;
+            }
+
+            this.chatStatusText.textContent = 'Server issue';
+            this.chatStatusText.title = `Chat API health check failed with ${response.status}`;
+        } catch (error) {
+            this.chatStatusText.textContent = 'Offline';
+            this.chatStatusText.title = 'Chat service is unreachable right now';
+        }
     }
     
     setupPortfolioContext() {
@@ -1526,6 +1556,10 @@ class ChatWidget {
     
     async getAIResponse(userMessage) {
         console.log('🌐 Chat API Endpoint:', this.apiEndpoint);
+
+        if (window.location.protocol === 'file:') {
+            throw new Error('Local static mode detected. Run with Vercel dev or deploy to Vercel to use /api/chat.');
+        }
         
         const context = this.createContextPrompt(userMessage);
         console.log('📝 Context prompt created');
@@ -1548,6 +1582,9 @@ class ChatWidget {
             if (!response.ok) {
                 const errorText = await response.text();
                 console.error('❌ Chat API Error Response:', errorText);
+                if (response.status === 404) {
+                    throw new Error('Chat API route not found. Ensure deployment includes /api/chat and use Vercel runtime.');
+                }
                 throw new Error(`Chat API Error (${response.status}): ${response.statusText}\n${errorText}`);
             }
             

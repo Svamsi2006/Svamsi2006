@@ -21,8 +21,17 @@ After saving env vars, trigger a redeploy from Vercel so `/api/chat` can read th
 
 1. Copy `.env.example` to `.env`
 2. Fill in values
-3. Run `vercel dev`
+3. Run the Vercel local runtime
 4. Open the site and test chat
+
+Commands:
+
+```powershell
+npm i -g vercel
+vercel dev
+```
+
+If you open `index.html` directly as a file (`file://...`), `/api/chat` will not exist and chat cannot work.
 
 ## 4. Security notes
 
