@@ -1,14 +1,9 @@
-// Configuration file for API keys and environment variables
-// For production, these should be loaded from environment variables or a secure backend
+// Public frontend configuration only.
+// Do not place private API keys in this file.
 
 const CONFIG = {
-    // Gemini AI API Configuration
-    GEMINI_API: {
-        // In production, this should be loaded from environment variables
-        // or fetched from a secure backend endpoint
-        KEY: 'AIzaSyA582yQ2JKbUNiGDts678dEPxU0Q5fWCXQ', // Your actual API key
-        URL: 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent'
-    },
+    // Serverless endpoint that proxies chat requests to OpenRouter
+    CHAT_API_ENDPOINT: '/api/chat',
     
     // Development mode flag
     DEVELOPMENT: true,

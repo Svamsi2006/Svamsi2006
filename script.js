@@ -1250,9 +1250,10 @@ if (typeof module !== 'undefined' && module.exports) {
 // AI Chat Widget Functionality
 class ChatWidget {
     constructor() {
-        // Use configuration from config.js or environment
-        this.apiKey = this.getApiKey();
-        this.apiUrl = (typeof CONFIG !== 'undefined' && CONFIG && CONFIG.GEMINI_API && CONFIG.GEMINI_API.URL) ? CONFIG.GEMINI_API.URL : 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent';
+        // Route AI requests through a serverless endpoint to keep API keys private
+        this.apiEndpoint = (typeof CONFIG !== 'undefined' && CONFIG && CONFIG.CHAT_API_ENDPOINT)
+            ? CONFIG.CHAT_API_ENDPOINT
+            : '/api/chat';
         this.isOpen = false;
         this.isTyping = false;
         
@@ -1264,25 +1265,6 @@ class ChatWidget {
         setTimeout(() => {
             this.showNotification();
         }, 3000);
-    }
-    
-    // Secure API key retrieval method
-    getApiKey() {
-        // Priority order: Environment variable > Config file > Error
-        if (typeof process !== 'undefined' && process.env && process.env.GEMINI_API_KEY) {
-            return process.env.GEMINI_API_KEY;
-        }
-        
-        if (typeof CONFIG !== 'undefined' && CONFIG.GEMINI_API && CONFIG.GEMINI_API.KEY) {
-            if (CONFIG.GEMINI_API.KEY === 'YOUR_API_KEY_HERE') {
-                console.warn('⚠️  Please set your actual API key in config.js');
-                return null;
-            }
-            return CONFIG.GEMINI_API.KEY;
-        }
-        
-        console.error('❌ No API key found. Please set GEMINI_API_KEY environment variable or update config.js');
-        return null;
     }
     
     initializeElements() {
@@ -1490,8 +1472,8 @@ class ChatWidget {
             
             let errorMessage = "I'm sorry, I'm having trouble connecting right now.";
             
-            if (error.message.includes('API key not configured')) {
-                errorMessage = "⚠️ Don't worry its just a small Glitch try again once or Please contact Vamsi directly for now!";
+            if (error.message.includes('OPENROUTER_API_KEY') || error.message.includes('500')) {
+                errorMessage = "⚠️ Chat server configuration issue. Please try again soon or contact Vamsi directly.";
             } else if (error.message.includes('403')) {
                 errorMessage = "🔑 API access issue. Please contact Vamsi directly!";
             } else if (error.message.includes('400')) {
@@ -1543,60 +1525,39 @@ class ChatWidget {
     }
     
     async getAIResponse(userMessage) {
-        // Validate API key first
-        if (!this.apiKey) {
-            console.error('❌ API key not configured');
-            throw new Error('API key not configured. Please check your configuration.');
-        }
-        
-        console.log('🔑 API Key:', this.apiKey ? 'Present' : 'Missing');
-        console.log('🌐 API URL:', this.apiUrl);
+        console.log('🌐 Chat API Endpoint:', this.apiEndpoint);
         
         const context = this.createContextPrompt(userMessage);
         console.log('📝 Context prompt created');
-        
-        const requestBody = {
-            contents: [{
-                parts: [{
-                    text: context
-                }]
-            }],
-            generationConfig: {
-                temperature: 0.7,
-                topK: 40,
-                topP: 0.95,
-                maxOutputTokens: 300,
-            }
-        };
-        
-        console.log('📤 Sending request to Gemini API...');
+        console.log('📤 Sending request to chat API...');
         
         try {
-            const response = await fetch(`${this.apiUrl}?key=${this.apiKey}`, {
+            const response = await fetch(this.apiEndpoint, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(requestBody)
+                body: JSON.stringify({
+                    message: userMessage,
+                    context
+                })
             });
             
             console.log('📥 Response received:', response.status, response.statusText);
             
             if (!response.ok) {
                 const errorText = await response.text();
-                console.error('❌ API Error Response:', errorText);
-                throw new Error(`API Error (${response.status}): ${response.statusText}\n${errorText}`);
+                console.error('❌ Chat API Error Response:', errorText);
+                throw new Error(`Chat API Error (${response.status}): ${response.statusText}\n${errorText}`);
             }
             
             const data = await response.json();
-            console.log('✅ API Response successful');
-            
-            if (data.candidates && data.candidates[0] && data.candidates[0].content && data.candidates[0].content.parts) {
-                return data.candidates[0].content.parts[0].text;
-            } else {
-                console.error('❌ Unexpected response format:', data);
-                throw new Error('Unexpected response format from API');
-            }
+            console.log('✅ Chat API response successful');
+
+            if (data && data.reply) return data.reply;
+
+            console.error('❌ Unexpected response format:', data);
+            throw new Error('Unexpected response format from chat API');
         } catch (error) {
             console.error('❌ Fetch error:', error);
             throw error;
