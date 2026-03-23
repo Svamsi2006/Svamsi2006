@@ -1362,22 +1362,43 @@ class ChatWidget {
         if (window.location.protocol === 'file:') {
             this.chatStatusText.textContent = 'Needs server';
             this.chatStatusText.title = 'Run with Vercel dev or deploy to Vercel to use /api/chat';
+            console.warn('Chat disabled: Running from file:// protocol');
             return;
         }
 
         try {
-            const response = await fetch(this.apiEndpoint, { method: 'GET' });
+            console.log('🔍 Checking chat service health at:', this.apiEndpoint);
+            
+            // Use abort controller for timeout
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 5000);
+
+            const response = await fetch(this.apiEndpoint, {
+                method: 'GET',
+                signal: controller.signal,
+                headers: { 'Content-Type': 'application/json' }
+            });
+            clearTimeout(timeoutId);
+
             if (response.ok) {
                 this.apiAvailable = true;
-                this.chatStatusText.textContent = 'Online now';
+                this.chatStatusText.textContent = '✅ Online';
+                this.chatStatusText.title = 'Chat service is ready';
+                console.log('✅ Chat service is online');
                 return;
             }
 
+            console.warn(`⚠️ Chat API returned ${response.status}`);
             this.chatStatusText.textContent = 'Server issue';
             this.chatStatusText.title = `Chat API health check failed with ${response.status}`;
         } catch (error) {
-            this.chatStatusText.textContent = 'Offline';
-            this.chatStatusText.title = 'Chat service is unreachable right now';
+            console.warn('⚠️ Chat health check failed:', error.message);
+            // Don't fully disable - allow fallback responses and user can still try
+            this.chatStatusText.textContent = '⏳ Checking...';
+            this.chatStatusText.title = 'Service check in progress. Try sending a message to test.';
+            
+            // Retry health check after delay
+            setTimeout(() => this.checkChatService(), 8000);
         }
     }
     
@@ -1556,6 +1577,7 @@ class ChatWidget {
     
     async getAIResponse(userMessage) {
         console.log('🌐 Chat API Endpoint:', this.apiEndpoint);
+        console.log('🌐 Current URL:', window.location.href);
 
         if (window.location.protocol === 'file:') {
             throw new Error('Local static mode detected. Run with Vercel dev or deploy to Vercel to use /api/chat.');
@@ -1566,6 +1588,9 @@ class ChatWidget {
         console.log('📤 Sending request to chat API...');
         
         try {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 15000);
+
             const response = await fetch(this.apiEndpoint, {
                 method: 'POST',
                 headers: {
@@ -1574,18 +1599,25 @@ class ChatWidget {
                 body: JSON.stringify({
                     message: userMessage,
                     context
-                })
+                }),
+                signal: controller.signal
             });
+            clearTimeout(timeoutId);
             
             console.log('📥 Response received:', response.status, response.statusText);
             
             if (!response.ok) {
                 const errorText = await response.text();
-                console.error('❌ Chat API Error Response:', errorText);
+                console.error('❌ Chat API Error Response:', errorText, 'Status:', response.status);
+                
                 if (response.status === 404) {
-                    throw new Error('Chat API route not found. Ensure deployment includes /api/chat and use Vercel runtime.');
+                    throw new Error('Chat API route not found at ' + this.apiEndpoint + '. Ensure /api/chat.js is deployed on Vercel.');
+                } else if (response.status === 500 && errorText.includes('OPENROUTER_API_KEY')) {
+                    throw new Error('OPENROUTER_API_KEY not set in Vercel environment variables. Please add it in Vercel Project Settings.');
+                } else if (response.status === 500) {
+                    throw new Error(`Server error (500). Details: ${errorText.substring(0, 100)}`);
                 }
-                throw new Error(`Chat API Error (${response.status}): ${response.statusText}\n${errorText}`);
+                throw new Error(`Chat API Error (${response.status}): ${response.statusText}`);
             }
             
             const data = await response.json();
