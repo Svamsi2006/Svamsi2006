@@ -9,7 +9,7 @@
     <a href="mailto:seelamvamsisivaganesh@gmail.com">
       <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" />
     </a>
-    <a href="https://vamsisivaganesh.vercel.app">
+    <a href="https://seelam.app">
       <img src="https://img.shields.io/badge/Portfolio-2563EB?style=for-the-badge&logo=firefox&logoColor=white" alt="Portfolio" />
     </a>
     <a href="https://wa.me/919346147336">
