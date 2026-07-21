@@ -3,14 +3,14 @@
   <br><br>
   
   <p>
-    <a href="https://www.linkedin.com/in/vamsi-/">
-      <img src="<img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/e6485a6f-3b10-4430-8f80-9bc4f09d7d64" />
-https://icons8.com/icon/85044/linkedin" alt="LinkedIn" />
-    </a>
-    <a href="mailto:seelamvamsisivaganesh@gmail.com">
-      <img src="<img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/47c05cd4-5ca1-4031-a46b-29199999591a" />
-" alt="Gmail" />
-    </a>
+<a href="https://www.linkedin.com/in/vamsi-/">
+  <img src="https://github.com/user-attachments/assets/e6485a6f-3b10-4430-8f80-9bc4f09d7d64" 
+       width="100" height="100" alt="LinkedIn" />
+</a>
+   <a href="mailto:seelamvamsisivaganesh@gmail.com">
+  <img src="https://github.com/user-attachments/assets/47c05cd4-5ca1-4031-a46b-29199999591a" 
+       width="100" height="100" alt="Gmail" />
+</a>
     <a href="https://seelam.app">
       <img src="https://img.shields.io/badge/Portfolio-2563EB?style=for-the-badge&logo=firefox&logoColor=white" alt="Portfolio" />
     </a>
