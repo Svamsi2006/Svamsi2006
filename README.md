@@ -4,10 +4,10 @@
   
   <p>
     <a href="https://www.linkedin.com/in/vamsi-/">
-      <img src="https://tse3.mm.bing.net/th/id/OIP.ozDiSGJlUqI6815cRlJiNAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="LinkedIn" />
+      <img src="https://icons8.com/icon/85044/linkedin" alt="LinkedIn" />
     </a>
     <a href="mailto:seelamvamsisivaganesh@gmail.com">
-      <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" />
+      <img src="https://icons8.com/icon/OumT4lIcOllS/mail" alt="Gmail" />
     </a>
     <a href="https://seelam.app">
       <img src="https://img.shields.io/badge/Portfolio-2563EB?style=for-the-badge&logo=firefox&logoColor=white" alt="Portfolio" />
