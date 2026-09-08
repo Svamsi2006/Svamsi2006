@@ -2,8 +2,6 @@
   "buildCommand": "echo 'Static site with serverless API'",
   "outputDirectory": ".",
   "env": {
-    "OPENROUTER_API_KEY": "@openrouter_api_key",
-    "OPENROUTER_MODEL": "openai/gpt-4o-mini",
     "SITE_URL": "@site_url",
     "SITE_NAME": "@site_name"
   },
