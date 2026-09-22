@@ -5,27 +5,204 @@
       "title": "Oracle Cloud Infrastructure 2025 Certified Data Science Professional",
       "issuer": "Oracle",
       "date": "2025",
-      "icon": "fas fa-certificate",
+      "icon": "fas fa-brain",
       "link": ""
     },
     {
-      "title": "c/c++",
-      "issuer": "algo university",
-      "date": "2026",
-      "icon": "fas fa-certificate",
-      "link": "",
-      "id": 1785522968601
+      "id": 2,
+      "title": "Oracle Cloud Infrastructure 2025 Certified Generative AI Professional",
+      "issuer": "Oracle",
+      "date": "2025",
+      "icon": "fas fa-microchip",
+      "link": ""
+    },
+    {
+      "id": 3,
+      "title": "Responsive Web Design",
+      "issuer": "freeCodeCamp",
+      "date": "2024",
+      "icon": "fas fa-code",
+      "link": ""
+    },
+    {
+      "id": 4,
+      "title": "Cloud Computing",
+      "issuer": "NPTEL",
+      "date": "2024",
+      "icon": "fas fa-cloud",
+      "link": ""
+    },
+    {
+      "id": 5,
+      "title": "Data Visualisation Simulation",
+      "issuer": "TCS & Forage",
+      "date": "2025",
+      "icon": "fas fa-chart-line",
+      "link": ""
+    },
+    {
+      "id": 6,
+      "title": "Generative AI",
+      "issuer": "GUVI",
+      "date": "2024",
+      "icon": "fas fa-robot",
+      "link": ""
+    },
+    {
+      "id": 7,
+      "title": "Google Cloud Arcade (240+ Labs)",
+      "issuer": "Google Cloud",
+      "date": "2024",
+      "icon": "fas fa-trophy",
+      "link": ""
+    },
+    {
+      "id": 1785522968601,
+      "title": "C/C++ & Data Structures",
+      "issuer": "Algo University",
+      "date": "2024",
+      "icon": "fas fa-terminal",
+      "link": ""
     }
   ],
   "projects": {
+    "featured": [
+      {
+        "id": "featured-0",
+        "name": "Sentinel Risk Engine",
+        "category": "FinTech / Fraud Detection / FastMCP AI Agent",
+        "award": "TransOrg AgentIQ Datathon — Track 1: FinTech & BFSI",
+        "description": "End-to-end data engineering & real-time risk intelligence platform for UPI payment networks. Resolves high-noise distributed transaction anomalies across 65,000+ raw records with an in-memory FastMCP AI Analyst.",
+        "keyCapabilities": [
+          "Advanced UPI fraud ring & merchant anomaly detection",
+          "High-throughput Python data cleaning pipelines",
+          "FastMCP Natural Language Query (NLQ) AI Analyst",
+          "Modern Next.js / React real-time risk monitoring dashboard",
+          "Entity resolution & relational linking of 65,000+ payment records"
+        ],
+        "technologies": ["Python", "FastMCP", "FastAPI", "Next.js", "React", "Pandas", "Graph Analytics", "FinTech / BFSI"],
+        "liveDemo": "https://github.com/Svamsi2006/datathon",
+        "github": "https://github.com/Svamsi2006/datathon",
+        "image": "./images/sentinel_risk_engine.jpg",
+        "isPublic": true
+      },
+      {
+        "id": "featured-1",
+        "name": "Balaveerulu AI",
+        "category": "AI Product / Generative AI / Automation",
+        "description": "An AI-powered personalized comic platform that transforms user details and themes into customized comic experiences.",
+        "keyCapabilities": [
+          "Personalized AI comic generation",
+          "AI-driven story and image workflows",
+          "Automated chatbot and email workflows",
+          "User authentication and persistent data",
+          "Payment/order verification workflow"
+        ],
+        "technologies": ["React", "TypeScript", "Vite", "Tailwind CSS", "Supabase", "n8n", "AI APIs", "Razorpay"],
+        "liveDemo": "https://balaveerulu.seelam.app/",
+        "github": "https://github.com/Svamsi2006/balaveerulu",
+        "isPublic": true
+      },
+      {
+        "id": "featured-2",
+        "name": "LPU Now",
+        "category": "Full-Stack / Real-Time Communication",
+        "description": "An open-source real-time university communication platform with messaging, group chats, announcements, file sharing, and peer-to-peer voice calling.",
+        "keyCapabilities": [
+          "Real-time messaging with read receipts",
+          "Group conversations",
+          "Peer-to-peer voice calling",
+          "Registration-number based authentication",
+          "File sharing & announcements",
+          "Responsive desktop/mobile interface with dark mode"
+        ],
+        "technologies": ["React 18", "Vite", "Node.js", "Express.js", "Socket.IO", "PeerJS", "WebRTC", "JWT", "Bcrypt", "MongoDB"],
+        "liveDemo": "https://lpunow.seelam.app/",
+        "github": "https://github.com/Svamsi2006/lpunow",
+        "isPublic": true
+      },
+      {
+        "id": "featured-3",
+        "name": "Smart-Audit AI",
+        "category": "AI / Analytics / Call Quality Intelligence",
+        "description": "An AI-assisted call auditing and revenue-leakage analysis system built for analyzing customer-support conversations and identifying SOP and business-risk signals.",
+        "keyCapabilities": [
+          "Call transcription & speaker diarization",
+          "SOP compliance analysis",
+          "Revenue leakage detection",
+          "Agent performance analytics & risk scoring",
+          "City-level insights with Google Sheets workflow"
+        ],
+        "technicalHighlight": "Analyzed 101 call records across 38 agents and identified 7 revenue-leakage cases.",
+        "technologies": ["Deepgram Nova-2", "Speech-to-Text", "Speaker Diarization", "Python", "Google Sheets", "AI Analytics"],
+        "role": "Team Lead + Research Developer",
+        "isPublic": false
+      }
+    ],
+    "aiAutomation": [
+      {
+        "id": "ai-1",
+        "name": "AI Sales Order Assistant",
+        "description": "An AI-powered sales/order automation workflow connecting conversational interfaces with business actions.",
+        "technologies": ["n8n", "MCP", "Telegram", "AI Automation"],
+        "highlight": "Connects AI reasoning with executable business workflows instead of only generating text.",
+        "isPublic": false
+      },
+      {
+        "id": "ai-2",
+        "name": "Document Intelligence & Question Extraction",
+        "status": "Verified Open Source",
+        "description": "A robust document intelligence service for extracting questions, hierarchical structures, and tabular data from digital and scanned documents.",
+        "technologies": ["FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "Alembic", "Redis", "Celery", "PyMuPDF", "OCR", "JWT / OAuth2"],
+        "github": "https://github.com/Svamsi2006/pbhack",
+        "isPublic": true
+      },
+      {
+        "id": "ai-3",
+        "name": "Deep Research Engine",
+        "description": "Autonomous multi-agent research assistant for software engineers, automating deep technical research, documentation synthesis, and report generation.",
+        "technologies": ["Python", "AI Agents", "LLMs", "RAG"],
+        "github": "https://github.com/Svamsi2006/deep-research-engine",
+        "isPublic": true
+      },
+      {
+        "id": "ai-4",
+        "name": "Context-Preserving PII Redaction Tool",
+        "status": "Production-Grade",
+        "description": "Production-grade, context-preserving PII redaction tool for MS Word (.docx) documents. Replaces sensitive PII with realistic, contextually consistent fake alternatives while preserving complex formatting, headers, footers, and nested tables.",
+        "technologies": ["Python", "python-docx", "NLP / NER", "Context Engine", "Regex", "Document Intelligence"],
+        "github": "https://github.com/Svamsi2006/scalar",
+        "image": "./images/pii_redaction.jpg",
+        "isPublic": true
+      }
+    ],
     "dataScience": [
+      {
+        "id": "ds-sentinel",
+        "title": "Sentinel Risk Engine — UPI Fraud Ring Detection",
+        "award": "TransOrg AgentIQ Datathon — Track 1: FinTech & BFSI",
+        "description": "End-to-end data engineering and real-time risk intelligence platform for UPI payment networks. Designed to resolve high-noise distributed transaction anomalies across 65,000+ raw records across four payment domains.",
+        "image": "./images/sentinel_risk_engine.jpg",
+        "imageAlt": "Sentinel Risk Engine - UPI Fraud Detection & FastMCP AI",
+        "liveDemo": "https://github.com/Svamsi2006/datathon",
+        "github": "https://github.com/Svamsi2006/datathon",
+        "technologies": [
+          "Python",
+          "FastMCP",
+          "FastAPI",
+          "Next.js",
+          "Pandas",
+          "Graph Analytics",
+          "Fraud Detection"
+        ]
+      },
       {
         "id": 1,
         "title": "Sales Dashboard",
         "description": "Real-time dashboard connected to Google Sheets, allowing live data display and updates via an integrated chatbot. All automation and integration are managed by n8n for seamless collaboration.",
         "image": "./images/sales_dashboard.png",
         "imageAlt": "Sales Dashboard",
-        "fallbackImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        "fallbackImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
         "liveDemo": "https://comic.lovable.app/",
         "github": "https://comic.lovable.app/",
         "technologies": [
@@ -40,7 +217,7 @@
         "id": 2,
         "title": "Data Visualization Dashboard",
         "description": "Interactive dashboard for analyzing large datasets with real-time data processing and beautiful visualizations EDA on Indian Census.",
-        "image": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        "image": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
         "imageAlt": "Data Visualization Dashboard",
         "liveDemo": "https://github.com/Svamsi2006/India-Census-EDA-Project",
         "github": "https://github.com/Svamsi2006/India-Census-EDA-Project",
@@ -56,7 +233,7 @@
         "id": 3,
         "title": "Predictive Analytics Model",
         "description": "Successfully built a machine learning model for loan prediction.",
-        "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
         "imageAlt": "Predictive Analytics Model",
         "liveDemo": "https://github.com/Svamsi2006/Ciperschool-project/blob/main/loan_prediction_simple.ipynb",
         "github": "https://github.com/Svamsi2006/Ciperschool-project/blob/main/loan_prediction_simple.ipynb",
@@ -74,7 +251,7 @@
         "id": 4,
         "title": "Data Visualisation using web interface",
         "description": "A powerful and intuitive web-based dashboard builder that allows users to create stunning, fully functional data visualizations by simply uploading a .json file.",
-        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
         "imageAlt": "Data Visualization Web Interface",
         "liveDemo": "https://svamsi2006.github.io/data-visualization-dashboardd/#",
         "github": "https://github.com/Svamsi2006/data-visualization-dashboardd?tab=readme-ov-file",
@@ -87,7 +264,7 @@
       },
       {
         "title": "Zomato India Multi-City Restaurant Study",
-        "description": "a comprehensive exploratory data analysis of Zomato's India restaurant listings (top 100 cities, scraped October 2023). Using 44,891 raw observations, we clean and curate 36,633 high-confidence records, engineer behavioural features, profile national and city-level trends, conduct inferential statistics, and train baseline rating prediction models. The analysis highlights concentration of restaurants in Tier-2/3 markets, limited price elasticity of ratings, cuisine preferences across metros, and the relative importance of delivery time and menu diversity in explaining rating variance.",
+        "description": "A comprehensive exploratory data analysis of Zomato's India restaurant listings (top 100 cities, scraped October 2023).",
         "image": "https://github.com/Svamsi2006/zomato_eda/blob/main/images/fig12.png",
         "imageAlt": "EDA",
         "liveDemo": "https://github.com/Svamsi2006/zomato_eda/tree/main",
@@ -105,47 +282,58 @@
     "aiBusiness": []
   },
   "skills": {
-    "languages": [
-      "Python",
-      "JavaScript",
-      "SQL",
-      "HTML/CSS"
-    ],
-    "dataAnalysis": [
-      "Power BI",
-      "Tableau",
-      "Excel",
-      "Pandas",
-      "NumPy"
-    ],
-    "machineLearning": [
-      "TensorFlow",
+    "dataScienceMl": [
+      "Machine Learning Model Training",
+      "Predictive Modeling",
       "Scikit-learn",
-      "PyTorch"
+      "TensorFlow",
+      "Feature Engineering",
+      "Pandas & NumPy"
     ],
-    "webDevelopment": [
-      "React",
-      "Node.js",
-      "Express"
+    "businessIntelligence": [
+      "Power BI Dashboards",
+      "Advanced Excel",
+      "SQL Data Extraction",
+      "Exploratory Data Analysis (EDA)",
+      "Tableau"
+    ],
+    "aiSpeech": [
+      "Large Language Models (LLMs)",
+      "RAG Architectures",
+      "AI Agents",
+      "Deepgram Nova-2 (STT)",
+      "Speaker Diarization"
+    ],
+    "automationBackend": [
+      "Python",
+      "FastAPI",
+      "n8n Workflow Automation",
+      "MCP (Model Context Protocol)",
+      "REST APIs"
     ],
     "databases": [
-      "MySQL",
       "PostgreSQL",
-      "MongoDB"
+      "MongoDB",
+      "Supabase",
+      "Google Sheets Workflows"
     ],
-    "tools": [
-      "Git",
+    "aiWebTools": [
+      "Developing Web Tools using AI",
+      "Interactive Dashboards",
       "Docker",
-      "VS Code",
-      "Jupyter"
+      "Git / GitHub",
+      "Google Cloud",
+      "Vercel"
     ]
   },
   "education": [
     {
       "id": 1,
-      "degree": "B.Tech in Computer Science Engineering",
-      "institution": "",
-      "focus": "Data Science and AI Web Development",
+      "degree": "B.Tech in Computer Science and Engineering (Data Science)",
+      "institution": "Lovely Professional University",
+      "focus": "Data Science & AI Problem Solving",
+      "cgpa": "8.02",
+      "year": "2023-2027",
       "status": "In Progress",
       "icon": "fas fa-graduation-cap"
     }

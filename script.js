@@ -522,12 +522,12 @@ document.head.appendChild(mouseTrailStyle);
 
 // Typewriter Effect
 const typewriterTexts = [
-    "Data Analyst & Business Analyst",
-    "AI web Designer & Developer ",
-    "Python C C++ JAVA DSA",
-    "Power BI & Tableau Specialist",
-    "AI & Machine Learning Explorer",
-    "UI/UX Designer"
+    "Data Science Student & AI Tools Builder",
+    "ML Model Training & Predictive Modeling",
+    "Power BI & Advanced Excel Dashboards",
+    "Developing Intelligent Web Tools using AI",
+    "Solving Business Problems with AI & Automation",
+    "Deepgram Speech AI & Call Analytics"
 ];
 
 let textIndex = 0;
@@ -1404,47 +1404,69 @@ class ChatWidget {
     
     setupPortfolioContext() {
         this.portfolioData = {
-            name: "Vamsi Siva Ganesh Seelam",
-            role: "Data Analyst, Business Intelligence Expert & Ai web Designer & Developer",
-            education: "B.Tech CSE Data Science 3rd Year at Lovely Professional University (2023-2027)",
-            location: "Punjab, India",
+            name: "Vamsi Seelam",
+            role: "Data Science Student & AI Tools Developer",
+            headline: "Data Science student with deep hands-on expertise in Machine Learning model training, Power BI, advanced Excel, and data analytics — developing websites, intelligent automation workflows, and AI tools to solve real-world problems.",
+            education: "B.Tech Computer Science and Engineering (Data Science) 2023-2027 at Lovely Professional University, CGPA: 8.02",
+            stats: "2027 B.Tech CSE | 8.02 CGPA | 240+ Google Arcade Labs | Data Science & AI Focus",
+            location: "Andhra Pradesh / Punjab, India",
             email: "seelamvamsisivaganesh@gmail.com",
             phone: "+91 9346147336",
             skills: {
-                dataScience: ["Python (92%)", "Data Structures & Algorithms (88%)", "Pandas & NumPy (85%)", "Data Visualization (82%)", "Machine Learning (78%)", "TensorFlow", "Scikit-learn"],
-                businessAnalytics: ["Excel & Dashboards (90%)", "SQL for Analysis (88%)", "Power BI (87%)", "KPI Design & Reporting (85%)", "Tableau (85%)", "Market & Competitor Research (80%)"],
-                fullStack: ["HTML/CSS/JavaScript (95%)", "React.js (90%)", "REST APIs (88%)", "Node.js & Express (85%)", "MongoDB & SQL (80%)"],
-                cloud: ["Google Cloud", "Git", "GitHub", "Visual Studio Code", "n8n Automations"],
-                softSkills: ["Communication & Presentation", "Critical Thinking", "Problem Solving", "Teamwork", "Time Management"],
-                languages: ["English (Fluent)", "Telugu (Fluent)", "Hindi (Conversational)"]
+                dataScienceMl: ["Machine Learning Model Training", "Predictive Modeling", "Scikit-learn", "TensorFlow", "Feature Engineering", "Model Evaluation & Tuning", "Pandas & NumPy", "Data Preprocessing"],
+                businessIntelligence: ["Power BI Dashboards", "Advanced Excel (Formulas, Pivot Tables, Financial/Data Modeling)", "SQL Data Extraction", "Exploratory Data Analysis (EDA)", "Tableau", "Statistical Analysis"],
+                aiSpeech: ["Large Language Models (LLMs)", "RAG Architectures", "AI Agents & Autonomous Workflows", "Deepgram Nova-2 STT", "Speaker Diarization", "Generative AI"],
+                automationBackend: ["Python", "FastAPI & REST APIs", "n8n Workflow Automation", "MCP (Model Context Protocol)", "Webhooks", "Telegram Bots", "Node.js"],
+                databases: ["PostgreSQL", "MongoDB", "Supabase", "SQLite", "Google Sheets Workflows", "Redis"],
+                aiWebTools: ["Developing Web Interfaces using AI", "Interactive Analytics Dashboards", "Rapid UI Prototyping", "Docker", "Git/GitHub", "Google Cloud", "Vercel"]
             },
-            projects: [
-                "Data Visualization Dashboard - Interactive dashboard with Python, React, D3.js, Flask",
-                "Predictive Analytics Model - ML model using Python, Scikit-learn, Pandas, TensorFlow",
-                "E-Commerce Platform - Full-stack app with React, Node.js, MongoDB, Redux",
-                "LPU Live - Real-time university chat tool where students connect via registration numbers (https://lpulivetimepass.vercel.app/)"
+            featuredProjects: [
+                "Sentinel Risk Engine: End-to-end data engineering & real-time risk intelligence platform for UPI payment networks (TransOrg AgentIQ Datathon — Track 1: FinTech & BFSI). Resolves high-noise distributed anomalies across 65,000+ raw records across four payment domains using Python data pipelines, Next.js live risk dashboard, and in-memory FastMCP Natural Language Query (NLQ) AI Analyst. Repo: https://github.com/Svamsi2006/datathon",
+                "Balaveerulu AI: AI-powered personalized comic platform transforming prompts and user details into illustrated stories with n8n workflows, Supabase, and Razorpay. Live at https://balaveerulu.seelam.app | Repo: https://github.com/Svamsi2006/balaveerulu",
+                "LPU Now: Open-source real-time university communication platform with messaging, group chats, announcements, and peer-to-peer voice calling using Socket.IO + WebRTC. Verified repo at https://github.com/Svamsi2006/lpunow | Live at https://lpunow.seelam.app",
+                "Smart-Audit AI: AI-assisted call auditing and revenue-leakage analysis system using Deepgram Nova-2 speech-to-text, speaker diarization, and SOP compliance scoring. Solved customer-support revenue leakage by analyzing 101 call records across 38 agents and identifying 7 leakage cases (Battery Smart Finalist, Team Lead + Research Developer)."
+            ],
+            aiAutomationProjects: [
+                "Sentinel Risk Engine: UPI fraud ring detection, graph entity resolution & FastMCP AI analyst (https://github.com/Svamsi2006/datathon).",
+                "Context-Preserving PII Redaction Tool: Production-grade context-preserving PII redaction tool for MS Word (.docx) documents, replacing PII with consistent synthetic identities across corporate prospectuses and nested tables (https://github.com/Svamsi2006/scalar).",
+                "Document Intelligence & Question Extraction: Production-focused document intelligence service extracting questions, tables, and structured data from digital and scanned PDFs using FastAPI, PyMuPDF, OCR, and Celery (https://github.com/Svamsi2006/pbhack).",
+                "Deep Research Engine: Autonomous multi-agent research assistant for software engineers, automating deep technical research, documentation synthesis, and report generation (https://github.com/Svamsi2006/deep-research-engine).",
+                "AI Sales Order Assistant: AI-powered sales/order automation workflow connecting conversational interfaces with business actions via n8n and MCP."
+            ],
+            dataScienceProjects: [
+                "Sentinel Risk Engine: 65,000+ payment records entity resolution, graph relational linking, and fraud ring detection (https://github.com/Svamsi2006/datathon).",
+                "Zomato India Multi-City Restaurant Study: Curated 36,633 records across 100 cities with inferential statistics, rating predictions, and EDA.",
+                "Indian Census EDA Project: In-depth exploratory data analysis uncovering demographic and socioeconomic patterns with Python, Pandas, and Seaborn.",
+                "Loan Prediction Machine Learning Model: Trained predictive classification model using Scikit-learn for loan approval risk evaluation."
             ],
             experience: [
-                "Founder & CEO at Balaveerulu - AI Comic Book Publisher (2024-Present)",
-                "Google Cloud Program Participant - Google Arcade (June 2024)",
+                "Smart-Audit AI - Team Lead + Research Developer: AI-powered call auditing, speech processing, revenue-leakage analysis, SOP evaluation, and analytics (Battery Smart Finalist).",
+                "Balaveerulu - Founder & CEO: Directing AI personalized comic platform, story generation, n8n automations, and e-commerce workflows.",
+                "Google Cloud Arcade Participant: Completed 240+ cloud labs, earning hands-on experience in cloud infrastructure, containers, and AI services.",
+                "Tata Consultancy Services (Forage) - Data Visualization Simulation (2025)",
                 "Graphic Design Intern - Near to College (2023)"
             ],
-            certificates: [
-                "Full Stack Web Development - freeCodeCamp (2023)",
-                "Google Certified Educator - Google for Education (2025)",
-                "Oracle Cloud Infrastructure 2025 Certified Data Science Professional - Oracle (2025)",
-                "Oracle Cloud Infrastructure 2025 Certified Generative AI Professional - Oracle (2025)",
-                "Google Cloud Platform - Google Arcade (2024)",
-                "C++ & Data Structures - Data Flair (2023)"
+            certifications: [
+                "Oracle Cloud Infrastructure 2025 Certified Data Science Professional",
+                "Oracle Cloud Infrastructure 2025 Certified Generative AI Professional",
+                "freeCodeCamp Responsive Web Design",
+                "NPTEL Cloud Computing",
+                "TCS Forage Data Visualization",
+                "GUVI Generative AI",
+                "Google Arcade - 240+ Labs Completed"
             ],
             socialLinks: {
                 github: "https://github.com/Svamsi2006",
+                sentinelRepo: "https://github.com/Svamsi2006/datathon",
+                scalarRepo: "https://github.com/Svamsi2006/scalar",
+                pbhackRepo: "https://github.com/Svamsi2006/pbhack",
+                lpunowRepo: "https://github.com/Svamsi2006/lpunow",
+                balaveeruluRepo: "https://github.com/Svamsi2006/balaveerulu",
+                deepResearchRepo: "https://github.com/Svamsi2006/deep-research-engine",
+                portfolio: "https://seelam.app",
                 linkedin: "https://www.linkedin.com/in/vamsi-/",
-                instagram: "https://www.instagram.com/__vamsi__2006/",
                 whatsapp: "https://wa.me/919346147336"
-            },
-            company: "Balaveerulu - AI Comic Book Publisher",
-            companyUrl: "https://balaveerulu.vercel.app/"
+            }
         };
     }
     
@@ -1517,7 +1539,7 @@ class ChatWidget {
             // Try fallback response first
             const fallbackResponse = this.getFallbackResponse(message);
             if (fallbackResponse) {
-                this.addMessage(`${fallbackResponse}\n\n⚠️ Note: AI chat is temporarily unavailable, but I can still help with basic questions!`, 'bot');
+                this.addMessage(`${fallbackResponse}\n\n⚠️ Note: AI live chat is running in offline fallback mode.`, 'bot');
                 return;
             }
             
@@ -1553,7 +1575,7 @@ class ChatWidget {
                 <i class="fas ${sender === 'user' ? 'fa-user' : 'fa-robot'}"></i>
             </div>
             <div class="message-content">
-                <p>${text}</p>
+                <p style="white-space: pre-line;">${text}</p>
                 <span class="message-time">${currentTime}</span>
             </div>
         `;
@@ -1639,46 +1661,64 @@ class ChatWidget {
             userMessage.toLowerCase().includes(greeting)
         );
         
-        let baseContext = `You are Vamsi's AI assistant on his portfolio website. You represent ${this.portfolioData.name}, a ${this.portfolioData.role}.
+        let baseContext = `You are Vamsi's AI assistant on his portfolio website (https://seelam.app). You represent ${this.portfolioData.name}, a ${this.portfolioData.role}.
+${this.portfolioData.headline}
 
 IMPORTANT GUIDELINES:
-- Be friendly, professional, and enthusiastic about Vamsi's work
-- Keep responses concise (2-3 sentences max)
-- Use emojis sparingly but effectively
-- Always maintain a helpful and positive tone
-- If asked about contact, provide his email: ${this.portfolioData.email}
-- For technical questions, reference his actual skills and projects
-- Be conversational and personable
+- Be friendly, technical, and accurate about Vamsi's real strengths
+- Present Vamsi as a Data Science Student who has strong mastery in Machine Learning model training, Power BI, Advanced Excel, and Python — who develops websites, tools, and automation workflows using AI to solve practical real-world problems (do NOT position him as a generic React/frontend developer).
+- Keep responses concise (2-4 sentences max)
+- When asked about projects, highlight the problems he solved using AI and data science:
+  1. Smart-Audit AI (Call auditing & revenue leakage detection using Deepgram Nova-2 STT, Team Lead)
+  2. Balaveerulu AI (Personalized AI comic platform, n8n + Supabase + Razorpay) - balaveerulu.seelam.app
+  3. LPU Now (Real-time university communication platform with Socket.IO + WebRTC peer-to-peer voice calling) - github.com/Svamsi2006/lpunow
+  4. AI Sales Order Assistant (n8n + MCP conversational automation)
+  5. Document Intelligence & Question Extraction (FastAPI + OCR + PyMuPDF prototype)
+  6. Data Science Projects: Zomato India EDA, Indian Census EDA, Loan Prediction ML model
+- If asked about contact, provide his email: ${this.portfolioData.email} or WhatsApp: ${this.portfolioData.phone}
+- GitHub profile: https://github.com/Svamsi2006
 
-VAMSI'S PROFILE:
+PROFILE:
 - Name: ${this.portfolioData.name}
 - Role: ${this.portfolioData.role}
 - Education: ${this.portfolioData.education}
+- Quick Stats: ${this.portfolioData.stats}
 - Location: ${this.portfolioData.location}
-- Company: ${this.portfolioData.company} (${this.portfolioData.companyUrl})
 
 SKILLS:
-- Data Science: ${this.portfolioData.skills.dataScience.join(', ')}
-- Business Analytics: ${this.portfolioData.skills.businessAnalytics.join(', ')}
-- Full Stack: ${this.portfolioData.skills.fullStack.join(', ')}
-- Cloud & Tools: ${this.portfolioData.skills.cloud.join(', ')}
+- Data Science & ML: ${this.portfolioData.skills.dataScienceMl.join(', ')}
+- Business Intelligence: ${this.portfolioData.skills.businessIntelligence.join(', ')}
+- AI & Speech: ${this.portfolioData.skills.aiSpeech.join(', ')}
+- Automation & Backend: ${this.portfolioData.skills.automationBackend.join(', ')}
+- Databases: ${this.portfolioData.skills.databases.join(', ')}
+- AI Web Tools: ${this.portfolioData.skills.aiWebTools.join(', ')}
 
-PROJECTS: ${this.portfolioData.projects.join('; ')}
+FEATURED PROJECTS:
+${this.portfolioData.featuredProjects.join('\n')}
 
-EXPERIENCE: ${this.portfolioData.experience.join('; ')}
+AI & AUTOMATION PROJECTS:
+${this.portfolioData.aiAutomationProjects.join('\n')}
 
+DATA SCIENCE PROJECTS:
+${this.portfolioData.dataScienceProjects.join('\n')}
+
+EXPERIENCE & LEADERSHIP:
+${this.portfolioData.experience.join('\n')}
+
+CERTIFICATIONS:
+${this.portfolioData.certifications.join(', ')}
 `;
 
         if (isGreeting) {
             return `${baseContext}
 User said: "${userMessage}"
 
-This is a greeting. Respond warmly and introduce yourself as Vamsi's AI assistant. Mention you're here to help with questions about his portfolio, skills, or projects. Keep it friendly and brief.`;
+This is a greeting. Respond warmly and introduce yourself as Vamsi's AI assistant. Mention you can answer questions about his Data Science projects, Machine Learning models, Power BI & Excel dashboards, and AI tools. Keep it concise.`;
         } else {
             return `${baseContext}
 User asked: "${userMessage}"
 
-Provide a helpful, informative response based on Vamsi's portfolio information. If the question is about something not covered in his profile, politely redirect to his contact information or suggest they reach out directly.`;
+Provide a helpful, crisp, and technically accurate response based strictly on Vamsi's portfolio facts. If the query asks for something not covered, politely suggest contacting Vamsi directly.`;
         }
     }
     
@@ -1686,18 +1726,22 @@ Provide a helpful, informative response based on Vamsi's portfolio information. 
     getFallbackResponse(userMessage) {
         const message = userMessage.toLowerCase();
         
-        if (message.includes('skill') || message.includes('technical')) {
-            return "🚀 Vamsi specializes in Data Science (Python, ML, Analytics), Business Intelligence (Power BI, Tableau, Excel), and Full Stack Development (React, Node.js). He's also experienced with cloud platforms like Google Cloud and AWS!";
-        } else if (message.includes('project')) {
-            return "💻 Vamsi has worked on several impressive projects including a Data Visualization Dashboard, Predictive Analytics Model, E-Commerce Platform, and his own AI Comic Book Publisher - Balaveerulu! Check out his portfolio for more details.";
-        } else if (message.includes('contact') || message.includes('reach')) {
-            return "📧 You can reach Vamsi at seelamvamsisivaganesh@gmail.com or WhatsApp him at +91 9346147336. He's always excited to discuss new opportunities!";
-        } else if (message.includes('experience') || message.includes('work')) {
-            return "💼 Vamsi is the Founder & CEO of Balaveerulu (AI Comic Book Publisher), completed Google Cloud Program, and has experience in graphic design. Currently pursuing B.Tech CSE with Data Science specialization at LPU!";
-        } else if (message.includes('education') || message.includes('study')) {
-            return "🎓 Vamsi is currently in his 3rd year of B.Tech Computer Science Engineering with specialization in Data Science & AI Web Development at Lovely Professional University (2023-2027).";
+        if (message.includes('featured') || (message.includes('project') && !message.includes('more') && !message.includes('archive'))) {
+            return "🚀 **Vamsi's Flagship AI & Data Science Projects:**\n1. **Sentinel Risk Engine**: UPI fraud ring detection, merchant anomaly scoring & in-memory FastMCP AI agent for 65k+ payment records (TransOrg AgentIQ Datathon — Track 1: FinTech & BFSI) — [github.com/Svamsi2006/datathon](https://github.com/Svamsi2006/datathon)\n2. **Balaveerulu AI**: Personalized AI comic generation tool with n8n & Supabase — [balaveerulu.seelam.app](https://balaveerulu.seelam.app/)\n3. **LPU Now**: Open-source real-time university communication system with WebRTC peer-to-peer voice calling — [github.com/Svamsi2006/lpunow](https://github.com/Svamsi2006/lpunow)\n4. **Smart-Audit AI**: Call auditing & revenue-leakage detection using Deepgram Nova-2 speech-to-text (Battery Smart Finalist, 101 calls analyzed, 7 leakages detected)\n5. **Context-Preserving PII Redactor**: Production-grade MS Word (.docx) context-preserving redaction engine — [github.com/Svamsi2006/scalar](https://github.com/Svamsi2006/scalar)\n6. **Document Intelligence & Question Extraction**: FastAPI + PyMuPDF + OCR service — [github.com/Svamsi2006/pbhack](https://github.com/Svamsi2006/pbhack)";
+        } else if (message.includes('skill') || message.includes('stack') || message.includes('tech') || message.includes('power bi') || message.includes('excel')) {
+            return "💻 **Skills & Competencies:**\n• **Data Science & ML:** Machine Learning Model Training, Scikit-learn, TensorFlow, Predictive Modeling, Feature Engineering, Pandas, NumPy\n• **BI & Analytics:** Power BI (Interactive Dashboards), Advanced Excel (Formulas, Pivot Tables, Data Modeling), SQL, Tableau, EDA\n• **AI & Speech Intelligence:** LLMs, RAG, AI Agents, FastMCP, Deepgram Nova-2 STT, Speaker Diarization\n• **AI Tools & Automation:** Developing Web Tools using AI, FastAPI, n8n Workflows, MCP, PostgreSQL, Supabase, Docker, Google Cloud";
+        } else if (message.includes('experience') || message.includes('lead') || message.includes('work')) {
+            return "💼 **Experience & Leadership:**\n• **Sentinel Risk Engine (Datathon FinTech Project):** Engineered real-time UPI fraud ring detection and FastMCP NLQ agent across 65k+ records.\n• **Smart-Audit AI (Team Lead + Research Developer):** Led AI call auditing, speech-to-text diarization, and revenue-leakage analysis across 101 customer conversations.\n• **Balaveerulu (Founder & CEO):** Created an AI-powered personalized comic generation platform.\n• **Google Cloud Arcade:** Completed 240+ cloud labs.";
+        } else if (message.includes('cert') || message.includes('credential')) {
+            return "🏅 **Verified Certifications:**\n• Oracle Cloud Infrastructure 2025 Data Science Professional\n• Oracle Cloud Infrastructure 2025 Generative AI Professional\n• freeCodeCamp Responsive Web Design\n• NPTEL Cloud Computing\n• TCS Forage Data Visualization\n• GUVI Generative AI\n• 240+ Google Arcade Labs Completed";
+        } else if (message.includes('github') || message.includes('repo') || message.includes('code') || message.includes('open source')) {
+            return "🐙 **Building in Public (Verified GitHub Repositories):**\n• **Sentinel Risk Engine:** https://github.com/Svamsi2006/datathon\n• **PII Redaction Tool:** https://github.com/Svamsi2006/scalar\n• **Document Intelligence (pbhack):** https://github.com/Svamsi2006/pbhack\n• **LPU Now:** https://github.com/Svamsi2006/lpunow\n• **Balaveerulu:** https://github.com/Svamsi2006/balaveerulu\n• **Deep Research Engine:** https://github.com/Svamsi2006/deep-research-engine";
+        } else if (message.includes('contact') || message.includes('reach') || message.includes('email') || message.includes('hire')) {
+            return "📧 Reach Vamsi directly at seelamvamsisivaganesh@gmail.com or via WhatsApp at +91 9346147336. He is open to Data Science, Machine Learning, and AI Solutions roles and collaborations!";
+        } else if (message.includes('education') || message.includes('study') || message.includes('college') || message.includes('cgpa')) {
+            return "🎓 Vamsi is pursuing B.Tech in Computer Science and Engineering (Data Science) at Lovely Professional University (2023-2027) with a current CGPA of 8.02.";
         } else {
-            return "👋 Hi! I'm Vamsi's AI assistant. I can help you learn about his skills, projects, experience, and education. Feel free to ask about his technical expertise, work experience, or how to contact him!";
+            return "👋 Hi! I'm Vamsi's AI assistant. Ask me about his Data Science projects, Machine Learning models, Power BI & Excel dashboards, or how he develops websites and tools using AI to solve problems!";
         }
     }
 }
@@ -1945,7 +1989,7 @@ function initCertFilter() {
             btns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             const filter = btn.dataset.filter;
-            carousel.querySelectorAll('.certificate-card').forEach(card => {
+            carousel.querySelectorAll('.certificate-card, .cert-expand-card').forEach(card => {
                 const yearEl = card.querySelector('.year');
                 if (!yearEl) return;
                 if (filter === 'all' || yearEl.textContent.trim() === filter) {
@@ -1960,8 +2004,250 @@ function initCertFilter() {
     });
 }
 
+// ==================== FEATURED PROJECTS SLIDING SHOWCASE ====================
+function initFeaturedSlider() {
+    const windowEl = document.getElementById('featuredSliderWindow');
+    const track = document.getElementById('featuredSliderTrack');
+    const slides = document.querySelectorAll('.featured-slide-item');
+    const tabs = document.querySelectorAll('.featured-tab-btn');
+    const dots = document.querySelectorAll('.featured-dot');
+    const prevBtn = document.getElementById('featuredPrevBtn');
+    const nextBtn = document.getElementById('featuredNextBtn');
+    const progressFill = document.getElementById('featuredSliderProgress');
+    const currentNumEl = document.getElementById('currentSlideNum');
+    const autoplayToggle = document.getElementById('featuredAutoplayToggle');
+    const autoplayIcon = document.getElementById('featuredAutoplayIcon');
+    const autoplayLabel = document.getElementById('featuredAutoplayLabel');
+
+    if (!windowEl || !track || !slides.length) return;
+
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+    const SLIDE_DURATION = 6000; // 6 seconds auto-slide
+    let isPlaying = true;
+    let isHovered = false;
+    let animFrameId = null;
+    let startTime = null;
+    let elapsedBeforePause = 0;
+
+    function updateUI(index) {
+        currentIndex = (index + totalSlides) % totalSlides;
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        // Update active class on slides
+        slides.forEach((s, idx) => {
+            s.classList.toggle('active', idx === currentIndex);
+        });
+
+        // Update tabs
+        tabs.forEach((tab, idx) => {
+            const isActive = idx === currentIndex;
+            tab.classList.toggle('active', isActive);
+            tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+
+        // Update dots
+        dots.forEach((dot, idx) => {
+            dot.classList.toggle('active', idx === currentIndex);
+        });
+
+        // Update counter
+        if (currentNumEl) {
+            currentNumEl.textContent = String(currentIndex + 1).padStart(2, '0');
+        }
+
+        // Reset progress bar
+        resetProgressBar();
+    }
+
+    function resetProgressBar() {
+        if (progressFill) progressFill.style.width = '0%';
+        elapsedBeforePause = 0;
+        startTime = performance.now();
+    }
+
+    function progressLoop(timestamp) {
+        if (!isPlaying || isHovered) {
+            animFrameId = requestAnimationFrame(progressLoop);
+            return;
+        }
+
+        if (!startTime) startTime = timestamp;
+        const currentElapsed = timestamp - startTime + elapsedBeforePause;
+        const progress = Math.min(currentElapsed / SLIDE_DURATION, 1);
+
+        if (progressFill) {
+            progressFill.style.width = `${progress * 100}%`;
+        }
+
+        if (progress >= 1) {
+            startTime = timestamp;
+            elapsedBeforePause = 0;
+            updateUI(currentIndex + 1);
+        }
+
+        animFrameId = requestAnimationFrame(progressLoop);
+    }
+
+    function startAutoPlay() {
+        isPlaying = true;
+        startTime = performance.now();
+        if (autoplayIcon) autoplayIcon.className = 'fas fa-pause';
+        if (autoplayLabel) autoplayLabel.textContent = 'Auto-slide (6s)';
+        if (!animFrameId) {
+            animFrameId = requestAnimationFrame(progressLoop);
+        }
+    }
+
+    function pauseAutoPlay() {
+        isPlaying = false;
+        if (autoplayIcon) autoplayIcon.className = 'fas fa-play';
+        if (autoplayLabel) autoplayLabel.textContent = 'Paused';
+    }
+
+    // Toggle button
+    if (autoplayToggle) {
+        autoplayToggle.addEventListener('click', () => {
+            if (isPlaying) {
+                pauseAutoPlay();
+            } else {
+                startAutoPlay();
+            }
+        });
+    }
+
+    // Arrow navigation
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            updateUI(currentIndex - 1);
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            updateUI(currentIndex + 1);
+        });
+    }
+
+    // Tab buttons
+    tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+            const idx = parseInt(tab.dataset.slideIndex, 10);
+            if (!isNaN(idx)) updateUI(idx);
+        });
+    });
+
+    // Dot indicators
+    dots.forEach((dot) => {
+        dot.addEventListener('click', () => {
+            const idx = parseInt(dot.dataset.slideIndex, 10);
+            if (!isNaN(idx)) updateUI(idx);
+        });
+    });
+
+    // Hover pause: pause timer while inspecting slide
+    windowEl.addEventListener('mouseenter', () => {
+        isHovered = true;
+    });
+
+    windowEl.addEventListener('mouseleave', () => {
+        isHovered = false;
+        startTime = performance.now();
+    });
+
+    // Keyboard navigation
+    windowEl.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            updateUI(currentIndex - 1);
+        } else if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            updateUI(currentIndex + 1);
+        }
+    });
+
+    // Touch swipe for mobile devices
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchEndX = 0;
+
+    windowEl.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+        isHovered = true;
+    }, { passive: true });
+
+    windowEl.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].clientX;
+        const touchEndY = e.changedTouches[0].clientY;
+        const diffX = touchEndX - touchStartX;
+        const diffY = touchEndY - touchStartY;
+
+        // Ensure horizontal intent
+        if (Math.abs(diffX) > 40 && Math.abs(diffX) > Math.abs(diffY)) {
+            if (diffX > 0) {
+                updateUI(currentIndex - 1);
+            } else {
+                updateUI(currentIndex + 1);
+            }
+        }
+        isHovered = false;
+        startTime = performance.now();
+    }, { passive: true });
+
+    // Start auto-play
+    updateUI(0);
+    startAutoPlay();
+}
+
+// ==================== EXPANDABLE ACCORDION / DRAWER CARDS ====================
+function initExpandableCards() {
+    // 1. Featured Projects Suite
+    const featCards = document.querySelectorAll('.expandable-project');
+    featCards.forEach(card => {
+        const header = card.querySelector('.expandable-project-header');
+        if (header) {
+            header.addEventListener('click', (e) => {
+                if (e.target.closest('a')) return;
+                const isCurrentlyExpanded = card.classList.contains('expanded');
+                // Accordion behavior: close others if opening
+                featCards.forEach(c => c.classList.remove('expanded'));
+                if (!isCurrentlyExpanded) {
+                    card.classList.add('expanded');
+                }
+            });
+        }
+    });
+
+    // 2. AI Automation Cards
+    const aiCards = document.querySelectorAll('.ai-expand-card');
+    aiCards.forEach(card => {
+        const header = card.querySelector('.ai-expand-header');
+        if (header) {
+            header.addEventListener('click', (e) => {
+                if (e.target.closest('a')) return;
+                card.classList.toggle('expanded');
+            });
+        }
+    });
+
+    // 3. Certificates Cards
+    const certCards = document.querySelectorAll('.cert-expand-card');
+    certCards.forEach(card => {
+        const header = card.querySelector('.cert-expand-header');
+        if (header) {
+            header.addEventListener('click', (e) => {
+                if (e.target.closest('a')) return;
+                card.classList.toggle('expanded');
+            });
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     initCertFilter();
+    initFeaturedSlider();
+    initExpandableCards();
     console.log('🚀 DOM loaded, initializing components...');
     
     // Initialize chat widget after a delay to ensure all other scripts are loaded

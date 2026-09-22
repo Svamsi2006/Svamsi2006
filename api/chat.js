@@ -37,8 +37,8 @@ module.exports = async function handler(req, res) {
             headers: {
                 'Authorization': 'Bearer ' + apiKey,
                 'Content-Type': 'application/json',
-                'HTTP-Referer': process.env.SITE_URL || 'https://vamsisivaganesh.vercel.app',
-                'X-Title': process.env.SITE_NAME || 'Vamsi Portfolio Chatbot'
+                'HTTP-Referer': process.env.SITE_URL || 'https://seelam.app',
+                'X-Title': process.env.SITE_NAME || 'Vamsi Seelam Portfolio Chatbot'
             },
             body: JSON.stringify({
                 model,
