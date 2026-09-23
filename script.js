@@ -7,8 +7,9 @@ AOS.init({
 
 // ==================== ENHANCED BACKGROUND ANIMATIONS ====================
 
-// Matrix Rain Effect
+// Matrix Rain Effect (Performance-optimized with RAF & IntersectionObserver)
 function initMatrixRain() {
+    if (window.innerWidth <= 768) return;
     const canvas = document.getElementById('matrixCanvas');
     if (!canvas) return;
     
@@ -19,36 +20,55 @@ function initMatrixRain() {
     const matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}";
     const matrixArray = matrix.split("");
     const fontSize = 10;
-    const columns = canvas.width / fontSize;
+    const columns = Math.floor(canvas.width / fontSize);
     const drops = [];
 
     for(let x = 0; x < columns; x++) {
         drops[x] = 1;
     }
 
-    function drawMatrix() {
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.04)';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        
-        ctx.fillStyle = '#0bd9f4';
-        ctx.font = fontSize + 'px arial';
-
-        for(let i = 0; i < drops.length; i++) {
-            const text = matrixArray[Math.floor(Math.random() * matrixArray.length)];
-            ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-            if(drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-                drops[i] = 0;
-            }
-            drops[i]++;
-        }
+    let isVisible = true;
+    const heroSection = document.getElementById('home');
+    if ('IntersectionObserver' in window && heroSection) {
+        const observer = new IntersectionObserver((entries) => {
+            isVisible = entries[0].isIntersecting;
+        }, { threshold: 0.05 });
+        observer.observe(heroSection);
     }
 
-    setInterval(drawMatrix, 35);
+    let lastDraw = 0;
+    function drawMatrix(timestamp) {
+        if (!isVisible || document.hidden) {
+            requestAnimationFrame(drawMatrix);
+            return;
+        }
+        if (timestamp - lastDraw > 42) {
+            lastDraw = timestamp;
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.fillStyle = '#0bd9f4';
+            ctx.font = fontSize + 'px arial';
+
+            for(let i = 0; i < drops.length; i++) {
+                const text = matrixArray[Math.floor(Math.random() * matrixArray.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                if(drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+        requestAnimationFrame(drawMatrix);
+    }
+
+    requestAnimationFrame(drawMatrix);
 }
 
-// Particle System
+// Particle System (Performance-optimized with RAF & IntersectionObserver)
 function initParticleSystem() {
+    if (window.innerWidth <= 768) return;
     const canvas = document.getElementById('particleCanvas');
     if (!canvas) return;
     
@@ -57,16 +77,16 @@ function initParticleSystem() {
     canvas.height = window.innerHeight;
 
     const particles = [];
-    const particleCount = 50;
+    const particleCount = 35; // Streamlined particle count for high FPS
 
     class Particle {
         constructor() {
             this.x = Math.random() * canvas.width;
             this.y = Math.random() * canvas.height;
-            this.vx = (Math.random() - 0.5) * 2;
-            this.vy = (Math.random() - 0.5) * 2;
+            this.vx = (Math.random() - 0.5) * 1.5;
+            this.vy = (Math.random() - 0.5) * 1.5;
             this.radius = Math.random() * 2 + 1;
-            this.opacity = Math.random() * 0.5 + 0.2;
+            this.opacity = Math.random() * 0.4 + 0.2;
         }
 
         update() {
@@ -89,7 +109,21 @@ function initParticleSystem() {
         particles.push(new Particle());
     }
 
+    let isVisible = true;
+    const heroSection = document.getElementById('home');
+    if ('IntersectionObserver' in window && heroSection) {
+        const observer = new IntersectionObserver((entries) => {
+            isVisible = entries[0].isIntersecting;
+        }, { threshold: 0.05 });
+        observer.observe(heroSection);
+    }
+
     function animateParticles() {
+        if (!isVisible || document.hidden) {
+            requestAnimationFrame(animateParticles);
+            return;
+        }
+
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         
         particles.forEach(particle => {
@@ -98,26 +132,26 @@ function initParticleSystem() {
         });
 
         // Draw connections
-        particles.forEach((particle, i) => {
-            particles.slice(i + 1).forEach(otherParticle => {
-                const dx = particle.x - otherParticle.x;
-                const dy = particle.y - otherParticle.y;
+        for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
                 const distance = Math.sqrt(dx * dx + dy * dy);
 
-                if (distance < 100) {
+                if (distance < 90) {
                     ctx.beginPath();
-                    ctx.moveTo(particle.x, particle.y);
-                    ctx.lineTo(otherParticle.x, otherParticle.y);
-                    ctx.strokeStyle = `rgba(11, 217, 244, ${0.2 - distance / 500})`;
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.strokeStyle = `rgba(11, 217, 244, ${0.18 - distance / 500})`;
                     ctx.stroke();
                 }
-            });
-        });
+            }
+        }
 
         requestAnimationFrame(animateParticles);
     }
 
-    animateParticles();
+    requestAnimationFrame(animateParticles);
 }
 
 // Dynamic Connection Lines
@@ -154,41 +188,54 @@ function initConnectionLines() {
     }
 }
 
-// Scroll-based Animation Control
+// Scroll-based Animation Control (Reflow-free with cached layout)
 function initScrollAnimations() {
+    if (window.innerWidth <= 768) return;
+
     let ticking = false;
+    let cachedDocHeight = document.documentElement.scrollHeight || 4000;
+    let cachedViewportHeight = window.innerHeight || 800;
+
+    window.addEventListener('resize', () => {
+        cachedDocHeight = document.documentElement.scrollHeight || 4000;
+        cachedViewportHeight = window.innerHeight || 800;
+    }, { passive: true });
+
+    const techParticles = document.querySelectorAll('.tech-particle');
+    const shapes = document.querySelectorAll('.shape');
+    const bubbles = document.querySelectorAll('.bubble');
 
     function updateAnimations() {
-        const scrollY = window.pageYOffset;
-        const viewportHeight = window.innerHeight;
-        const documentHeight = document.documentElement.scrollHeight;
-        const scrollPercent = scrollY / (documentHeight - viewportHeight);
+        const scrollY = window.pageYOffset || window.scrollY;
+        const maxScroll = Math.max(1, cachedDocHeight - cachedViewportHeight);
+        const scrollPercent = Math.min(1, Math.max(0, scrollY / maxScroll));
 
         // Update tech particles based on scroll
-        const techParticles = document.querySelectorAll('.tech-particle');
-        techParticles.forEach((particle, index) => {
-            const delay = index * 0.1;
-            const rotation = scrollPercent * 360 + delay * 50;
-            const translateY = Math.sin(scrollPercent * Math.PI * 2 + delay) * 20;
-            
-            particle.style.transform = `translateY(${translateY}px) rotate(${rotation}deg)`;
-        });
+        if (techParticles.length > 0) {
+            techParticles.forEach((particle, index) => {
+                const delay = index * 0.1;
+                const rotation = scrollPercent * 360 + delay * 50;
+                const translateY = Math.sin(scrollPercent * Math.PI * 2 + delay) * 20;
+                particle.style.transform = `translateY(${translateY}px) rotate(${rotation}deg)`;
+            });
+        }
 
         // Update geometric shapes
-        const shapes = document.querySelectorAll('.shape');
-        shapes.forEach((shape, index) => {
-            const scale = 0.8 + Math.sin(scrollPercent * Math.PI * 4 + index) * 0.3;
-            const rotation = scrollPercent * 180 + index * 45;
-            
-            shape.style.transform = `scale(${scale}) rotate(${rotation}deg)`;
-        });
+        if (shapes.length > 0) {
+            shapes.forEach((shape, index) => {
+                const scale = 0.8 + Math.sin(scrollPercent * Math.PI * 4 + index) * 0.3;
+                const rotation = scrollPercent * 180 + index * 45;
+                shape.style.transform = `scale(${scale}) rotate(${rotation}deg)`;
+            });
+        }
 
         // Update bubble opacity based on scroll
-        const bubbles = document.querySelectorAll('.bubble');
-        bubbles.forEach((bubble, index) => {
-            const opacity = 0.1 + Math.sin(scrollPercent * Math.PI * 2 + index * 0.5) * 0.3;
-            bubble.style.opacity = Math.max(0.1, opacity);
-        });
+        if (bubbles.length > 0) {
+            bubbles.forEach((bubble, index) => {
+                const opacity = 0.1 + Math.sin(scrollPercent * Math.PI * 2 + index * 0.5) * 0.3;
+                bubble.style.opacity = Math.max(0.1, opacity);
+            });
+        }
 
         ticking = false;
     }
@@ -200,7 +247,7 @@ function initScrollAnimations() {
         }
     }
 
-    window.addEventListener('scroll', requestTick);
+    window.addEventListener('scroll', requestTick, { passive: true });
 }
 
 // Responsive Canvas Resize
@@ -449,34 +496,40 @@ window.addEventListener('orientationchange', () => {
     }, 100);
 });
 
-// Mouse interaction effects
+// Mouse interaction effects (Throttled & Reflow-free)
 function initMouseInteraction() {
-    let mouseX = 0;
-    let mouseY = 0;
+    if (window.innerWidth <= 768 || ('ontouchstart' in window)) return;
+
+    let ticking = false;
+    let lastTrailTime = 0;
 
     document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
+        const now = Date.now();
 
-        // Move tech particles slightly towards mouse
-        const techParticles = document.querySelectorAll('.tech-particle');
-        techParticles.forEach((particle, index) => {
-            const rect = particle.getBoundingClientRect();
-            const centerX = rect.left + rect.width / 2;
-            const centerY = rect.top + rect.height / 2;
-            
-            const deltaX = (mouseX - centerX) * 0.01;
-            const deltaY = (mouseY - centerY) * 0.01;
-            
-            particle.style.transform += ` translate(${deltaX}px, ${deltaY}px)`;
-        });
+        // Throttle trail creation to once every 80ms
+        if (now - lastTrailTime > 80) {
+            lastTrailTime = now;
+            createMouseTrail(mouseX, mouseY);
+        }
 
-        // Create mouse trail effect
-        createMouseTrail(mouseX, mouseY);
-    });
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                const normX = (mouseX / window.innerWidth - 0.5) * 12;
+                const normY = (mouseY / window.innerHeight - 0.5) * 12;
+                const container = document.querySelector('.floating-tech-icons');
+                if (container) {
+                    container.style.transform = `translate(${normX}px, ${normY}px)`;
+                }
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }, { passive: true });
 }
 
-// Mouse trail effect
+// Mouse trail effect (Throttled pool)
 function createMouseTrail(x, y) {
     const trail = document.createElement('div');
     trail.className = 'mouse-trail';
@@ -487,7 +540,7 @@ function createMouseTrail(x, y) {
     
     setTimeout(() => {
         trail.remove();
-    }, 800);
+    }, 600);
 }
 
 // Add CSS for mouse trail

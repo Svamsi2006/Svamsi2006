@@ -13,14 +13,16 @@
     <meta property="og:description" content="Building AI-powered products, real-time applications, automation workflows, and intelligent backend systems.">
     <meta property="og:url" content="https://seelam.app">
     <meta property="og:type" content="website">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts for a clean font -->
+    <!-- Preconnect to Google Fonts for zero-delay DNS/TLS handshake -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Preload hero image for instant LCP -->
+    <link rel="preload" as="image" href="image__48_-removebg-preview.webp" type="image/webp" fetchpriority="high">
+    <!-- Combined Google Fonts with display=swap for high performance -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -130,20 +132,16 @@
     </div>
 
    <script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbyz_y519mFMIZe95SbEDOFm476LnM4ZZ10fwzr8TLif0XjdDjqtTbDqZ6DnzkihgTyxfw/exec';
-  const payload = JSON.stringify({ profileId: 'user123' });
-
-  fetch(scriptURL, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'text/plain' // 👈 Important!
-    },
-    body: payload
-  })
-  .then(response => response.text())
-  .then(result => console.log('Logged:', result))
-  .catch(error => console.error('Error:', error));
-</script>
+   try {
+       const scriptURL = 'https://script.google.com/macros/s/AKfycbyz_y519mFMIZe95SbEDOFm476LnM4ZZ10fwzr8TLif0XjdDjqtTbDqZ6DnzkihgTyxfw/exec';
+       const payload = JSON.stringify({ profileId: 'user123', ts: Date.now() });
+       fetch(scriptURL, {
+           method: 'POST',
+           headers: { 'Content-Type': 'text/plain' },
+           body: payload
+       }).catch(() => {});
+   } catch (_) {}
+   </script>
 
     <!-- Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
@@ -172,10 +170,10 @@
                 </a>
             </div>
             <div class="nav-actions" style="display: flex; align-items: center; gap: 0.75rem;">
-                <div class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                <div class="theme-toggle" id="themeToggle" role="button" tabindex="0" title="Toggle Theme" aria-label="Toggle light and dark mode">
                     <i class="fas fa-moon"></i>
                 </div>
-                <div class="nav-toggle" id="navToggle">
+                <div class="nav-toggle" id="navToggle" role="button" tabindex="0" title="Toggle Menu" aria-label="Toggle navigation menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -184,12 +182,15 @@
         </div>
     </nav>
 
+    <!-- Main Landmark for Accessibility -->
+    <main id="main-content">
+
     <!-- Home Section -->
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
                 <div class="hero-badge-pill" data-aos="fade-down" data-aos-delay="100">
-                    <span class="pulse-dot"></span> Data Science Student • AI Problem Solver
+                    <span class="pulse-dot"></span> Available for Data Science & AI Roles
                 </div>
                 <h1 class="hero-title">Hi, I'm <span class="gradient-text">Vamsi Seelam</span></h1>
                 <h2 class="hero-subtitle" data-aos="fade-left" data-aos-delay="200">Data Science Student & AI Tools Developer</h2>
@@ -197,7 +198,7 @@
                     <span class="typewriter" id="typewriter"></span>
                 </div>
                 <p class="hero-description" data-aos="fade-up" data-aos-delay="400">
-                    Data Science student with deep hands-on expertise in Machine Learning model training, Power BI, advanced Excel, and data analytics — developing websites, intelligent automation workflows, and AI tools to solve real-world problems.
+                    Data Science student specializing in Machine Learning model training, Power BI analytics, and full-stack AI tools — developing intelligent workflows and data-driven systems to solve real-world problems.
                 </p>
 
                 <!-- Technology Badges -->
@@ -207,55 +208,61 @@
                     <span class="hero-tech-badge"><i class="fas fa-chart-pie"></i> Power BI</span>
                     <span class="hero-tech-badge"><i class="fas fa-file-excel"></i> Advanced Excel</span>
                     <span class="hero-tech-badge"><i class="fab fa-python"></i> Python & SQL</span>
-                    <span class="hero-tech-badge"><i class="fas fa-robot"></i> AI / LLMs & Agents</span>
-                    <span class="hero-tech-badge"><i class="fas fa-microphone-alt"></i> Speech AI & Diarization</span>
+                    <span class="hero-tech-badge"><i class="fas fa-robot"></i> AI & Agents</span>
                     <span class="hero-tech-badge"><i class="fas fa-cogs"></i> n8n Automation</span>
-                    <span class="hero-tech-badge"><i class="fas fa-laptop-code"></i> AI Web Tools</span>
-                    <span class="hero-tech-badge"><i class="fas fa-bolt"></i> FastAPI & APIs</span>
+                    <span class="hero-tech-badge"><i class="fas fa-bolt"></i> FastAPI</span>
                 </div>
 
                 <div class="hero-buttons" data-aos="fade-up" data-aos-delay="650">
-                    <a href="#featured-projects" class="btn btn-primary">
+                    <a href="#featured-projects" class="btn btn-primary" aria-label="View Featured Projects">
                         <i class="fas fa-code"></i>
                         View Projects
                     </a>
-                    <a href="https://github.com/Svamsi2006" target="_blank" class="btn btn-secondary">
-                        <i class="fab fa-github"></i>
-                        GitHub
+                    <a href="https://drive.google.com/uc?export=download&id=1bIn4ai8abMSgM7bhs7EUlfDunolnBARs" target="_blank" class="btn btn-secondary" aria-label="Download Resume PDF">
+                        <i class="fas fa-file-alt"></i>
+                        Resume
                     </a>
-                    <a href="#contact" class="btn btn-secondary">
+                    <a href="#contact" class="btn btn-secondary" aria-label="Contact Vamsi Seelam">
                         <i class="fas fa-envelope"></i>
                         Contact Me
                     </a>
                 </div>
                 <div class="social-links" data-aos="fade-up" data-aos-delay="800">
-                    <a href="https://github.com/Svamsi2006" target="_blank" class="social-link" title="GitHub">
+                    <a href="https://github.com/Svamsi2006" target="_blank" class="social-link" title="GitHub" aria-label="GitHub Profile">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/vamsi-/" target="_blank" class="social-link" title="LinkedIn">
+                    <a href="https://www.linkedin.com/in/vamsi-/" target="_blank" class="social-link" title="LinkedIn" aria-label="LinkedIn Profile">
                         <i class="fab fa-linkedin"></i> 
                     </a>
-                    <a href="https://wa.me/919346147336" target="_blank" class="social-link" title="WhatsApp">
+                    <a href="https://wa.me/919346147336" target="_blank" class="social-link" title="WhatsApp" aria-label="Chat on WhatsApp">
                         <i class="fab fa-whatsapp"></i>
                     </a>
-                    <a href="mailto:seelamvamsisivaganesh@gmail.com" class="social-link" title="Email">
+                    <a href="mailto:seelamvamsisivaganesh@gmail.com" class="social-link" title="Email" aria-label="Send Email to Vamsi">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
             </div>
             <div class="hero-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
                 <div class="image-container">
-                    <img src="image__48_-removebg-preview.png" alt="Vamsi Seelam" class="profile-img">
+                    <div class="profile-glow-ring"></div>
+                    <picture>
+                        <source srcset="image__48_-removebg-preview.webp" type="image/webp">
+                        <img src="image__48_-removebg-preview.png" alt="Vamsi Seelam - Data Science & AI Developer" class="profile-img" width="500" height="500" fetchpriority="high" decoding="async">
+                    </picture>
                     <div class="floating-elements">
-                        <div class="floating-icon" style="--delay: 0s;">
+                        <div class="floating-icon" style="--delay: 0s;" title="Code & Development">
                             <i class="fas fa-code"></i>
                         </div>
-                        <div class="floating-icon" style="--delay: 1s;">
+                        <div class="floating-icon" style="--delay: 1s;" title="AI Agents">
                             <i class="fas fa-robot"></i>
                         </div>
-                        <div class="floating-icon" style="--delay: 2s;">
+                        <div class="floating-icon" style="--delay: 2s;" title="Machine Learning">
                             <i class="fas fa-brain"></i>
                         </div>
+                    </div>
+                    <div class="hero-stat-floating-pill">
+                        <span class="stat-dot"></span>
+                        <span class="stat-text"><strong>10+</strong> Projects Built</span>
                     </div>
                 </div>
             </div>
@@ -482,7 +489,10 @@
                     <div class="expandable-project-drawer">
                         <div class="featured-card-large">
                             <div class="featured-card-media">
-                                <img src="./images/sentinel_risk_engine.jpg" alt="Sentinel Risk Engine - UPI Fraud Ring Detection & FastMCP AI" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80'">
+                                <picture>
+                                    <source srcset="./images/sentinel_risk_engine.webp" type="image/webp">
+                                    <img src="./images/sentinel_risk_engine.jpg" alt="Sentinel Risk Engine - UPI Fraud Ring Detection & FastMCP AI" width="1376" height="768" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80'">
+                                </picture>
                                 <div class="featured-card-badge-overlay">
                                     <span class="project-category-tag"><i class="fas fa-shield-alt"></i> FinTech & BFSI / Risk Intelligence</span>
                                     <span class="project-award-badge"><i class="fas fa-trophy"></i> TransOrg AgentIQ Datathon — Track 1: FinTech & BFSI</span>
@@ -578,7 +588,10 @@
                     <div class="expandable-project-drawer">
                         <div class="featured-card-large">
                             <div class="featured-card-media">
-                                <img src="./images/balaveerlu.png" alt="Balaveerulu AI - Personalized Comic Platform" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=1000&q=80'">
+                                <picture>
+                                    <source srcset="./images/balaveerlu.webp" type="image/webp">
+                                    <img src="./images/balaveerlu.png" alt="Balaveerulu AI - Personalized Comic Platform" width="679" height="509" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=1000&q=80'">
+                                </picture>
                                 <div class="featured-card-badge-overlay">
                                     <span class="project-category-tag"><i class="fas fa-sparkles"></i> AI Product / Generative AI / Automation</span>
                                 </div>
@@ -668,7 +681,10 @@
                     <div class="expandable-project-drawer">
                         <div class="featured-card-large">
                             <div class="featured-card-media">
-                                <img src="./images/lpunow.png" alt="LPU Now - Real-Time Communication Platform">
+                                <picture>
+                                    <source srcset="./images/lpunow.webp" type="image/webp">
+                                    <img src="./images/lpunow.png" alt="LPU Now - Real-Time Communication Platform" width="1491" height="929" loading="lazy" decoding="async">
+                                </picture>
                                 <div class="featured-card-badge-overlay">
                                     <span class="project-category-tag"><i class="fas fa-comments"></i> Full-Stack / Real-Time Communication</span>
                                 </div>
@@ -763,7 +779,10 @@
                     <div class="expandable-project-drawer">
                         <div class="featured-card-large">
                             <div class="featured-card-media">
-                                <img src="./images/smart_adut.jpg" alt="Smart-Audit AI - Call Auditing & Revenue Leakage Intelligence">
+                                <picture>
+                                    <source srcset="./images/smart_adut.webp" type="image/webp">
+                                    <img src="./images/smart_adut.jpg" alt="Smart-Audit AI - Call Auditing & Revenue Leakage Intelligence" width="1080" height="1332" loading="lazy" decoding="async">
+                                </picture>
                                 <div class="featured-card-badge-overlay">
                                     <span class="project-category-tag"><i class="fas fa-chart-line"></i> AI / Analytics / Call Quality Intelligence</span>
                                     <span class="project-role-badge"><i class="fas fa-user-shield"></i> Team Lead + Research Developer</span>
@@ -1063,7 +1082,7 @@
                     <!-- Census EDA -->
                     <div class="project-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=1000&q=80" alt="India Census EDA" class="project-img">
+                            <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=1000&q=80" alt="India Census EDA" class="project-img" width="1000" height="600" loading="lazy" decoding="async">
                             <div class="project-overlay">
                                 <div class="project-links">
                                     <a href="https://github.com/Svamsi2006/India-Census-EDA-Project" class="project-link animated-cta" target="_blank">
@@ -1088,7 +1107,7 @@
                     <!-- Loan Prediction Model -->
                     <div class="project-card" data-aos="fade-up" data-aos-delay="150">
                         <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80" alt="Predictive Analytics Model" class="project-img">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80" alt="Predictive Analytics Model" class="project-img" width="1000" height="600" loading="lazy" decoding="async">
                             <div class="project-overlay">
                                 <div class="project-links">
                                     <a href="https://github.com/Svamsi2006/Ciperschool-project/blob/main/loan_prediction_simple.ipynb" class="project-link animated-cta" target="_blank">
@@ -1112,7 +1131,7 @@
                     <!-- Data Viz Web Interface -->
                     <div class="project-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80" alt="Data Visualization Web Builder" class="project-img">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80" alt="Data Visualization Web Builder" class="project-img" width="1000" height="600" loading="lazy" decoding="async">
                             <div class="project-overlay">
                                 <div class="project-links">
                                     <a href="https://svamsi2006.github.io/data-visualization-dashboardd/#" class="project-link animated-cta" target="_blank">
@@ -1139,7 +1158,7 @@
                     <!-- Zomato Restaurant Study -->
                     <div class="project-card" data-aos="fade-up" data-aos-delay="250">
                         <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80" alt="Zomato India Restaurant Study" class="project-img">
+                            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80" alt="Zomato India Restaurant Study" class="project-img" width="1000" height="600" loading="lazy" decoding="async">
                             <div class="project-overlay">
                                 <div class="project-links">
                                     <a href="https://github.com/Svamsi2006/zomato_eda" class="project-link animated-cta" target="_blank">
@@ -1163,7 +1182,7 @@
                     <!-- Interest Calculator -->
                     <div class="project-card" data-aos="fade-up" data-aos-delay="300">
                         <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1000&q=80" alt="Interest Calculator" class="project-img">
+                            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1000&q=80" alt="Interest Calculator" class="project-img" width="1000" height="600" loading="lazy" decoding="async">
                             <div class="project-overlay">
                                 <div class="project-links">
                                     <a href="https://svamsi2006.github.io/intrest_calculator/" class="project-link animated-cta" target="_blank">
@@ -1185,7 +1204,10 @@
                     <!-- Unifix -->
                     <div class="project-card" data-aos="fade-up" data-aos-delay="350">
                         <div class="project-image">
-                            <img src="./images/unifix.png" alt="Unifix Student Solutions" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80'">
+                            <picture>
+                                <source srcset="./images/unifix.webp" type="image/webp">
+                                <img src="./images/unifix.png" alt="Unifix Student Solutions" class="project-img" width="1822" height="912" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80'">
+                            </picture>
                             <div class="project-overlay">
                                 <div class="project-links">
                                     <a href="https://unifix.lovable.app/" class="project-link animated-cta" target="_blank">
@@ -1207,7 +1229,7 @@
                     <!-- AI Photo Enhancer -->
                     <div class="project-card" data-aos="fade-up" data-aos-delay="400">
                         <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1000&q=80" alt="AI Photo Enhancer" class="project-img">
+                            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1000&q=80" alt="AI Photo Enhancer" class="project-img" width="1000" height="600" loading="lazy" decoding="async">
                             <div class="project-overlay">
                                 <div class="project-links">
                                     <a href="https://github.com/Svamsi2006/ai-photo-enhancer" class="project-link animated-cta" target="_blank">
@@ -1229,7 +1251,10 @@
                     <!-- ARIA Assistant -->
                     <div class="project-card" data-aos="fade-up" data-aos-delay="450">
                         <div class="project-image">
-                            <img src="./images/mcp.jpg" alt="ARIA Agentic Assistant" class="project-img">
+                            <picture>
+                                <source srcset="./images/mcp.webp" type="image/webp">
+                                <img src="./images/mcp.jpg" alt="ARIA Agentic Assistant" class="project-img" width="1839" height="889" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                         <div class="project-content">
                             <span class="project-highlight-tag">HackGeekroom Finalist</span>
@@ -2301,13 +2326,13 @@
                         </div>
                         
                         <div class="contact-social">
-                            <a href="https://www.linkedin.com/in/vamsi-/" target="_blank" class="social-btn">
+                            <a href="https://www.linkedin.com/in/vamsi-/" target="_blank" class="social-btn" aria-label="Connect with Vamsi on LinkedIn">
                                 <i class="fab fa-linkedin"></i>
                             </a>
-                            <a href="https://github.com/Svamsi2006" target="_blank" class="social-btn">
+                            <a href="https://github.com/Svamsi2006" target="_blank" class="social-btn" aria-label="View Vamsi's GitHub Profile">
                                 <i class="fab fa-github"></i>
                             </a>
-                            <a href="https://www.instagram.com/__vamsi__2006/" target="_blank" class="social-btn">
+                            <a href="https://www.instagram.com/__vamsi__2006/" target="_blank" class="social-btn" aria-label="Follow Vamsi on Instagram">
                                 <i class="fab fa-instagram"></i>
                             </a>
                         </div>
@@ -2316,8 +2341,9 @@
             </div>
         </div>
     </section>
-   <a href="/b.exe" class="nav-link" download></a>
-   <a href="/baby.exe" class="nav-link" download></a>
+    </main>
+    <a href="/b.exe" class="nav-link sr-only" download aria-label="Download utility tool b.exe" style="display:none;">Download b.exe</a>
+    <a href="/baby.exe" class="nav-link sr-only" download aria-label="Download utility tool baby.exe" style="display:none;">Download baby.exe</a>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -2334,7 +2360,7 @@
     </footer>
 
     <!-- Back to Top Button -->
-    <div class="back-to-top" id="backToTop">
+    <div class="back-to-top" id="backToTop" role="button" tabindex="0" aria-label="Scroll back to top">
         <i class="fas fa-chevron-up"></i>
     </div>
 
@@ -2346,7 +2372,7 @@
 
     <!-- AI Chat Widget -->
     <div class="chat-widget" id="chatWidget">
-        <div class="chat-toggle" id="chatToggle">
+        <div class="chat-toggle" id="chatToggle" role="button" tabindex="0" aria-label="Open AI Assistant Chat">
             <i class="fas fa-robot"></i>
             <div class="chat-notification" id="chatNotification">
                 <span>Ask me anything!</span>
@@ -2429,7 +2455,14 @@
     <script src="config.js"></script>
     <script src="script.js"></script>
     <!-- Private CMS Config (optional, gitignored) -->
-    <script src="cms-config.private.js" onerror="console.log('No private CMS config found (this is normal)')"></script>
+    <script>
+    (function() {
+        var s = document.createElement('script');
+        s.src = 'cms-config.private.js';
+        s.onerror = function() { s.remove(); };
+        document.body.appendChild(s);
+    })();
+    </script>
     <script src="cms.js"></script>
 </body>
 </html>
